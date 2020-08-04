@@ -1,9 +1,9 @@
 <?php
 
 /*
-    Description: Dundee Picture House Navigation bar at the top of each page.
+    Description: Navigation bar at the top of each page.
 
-    Author: David McRae, Brad Mair, Aaron Hay
+    Author: David McRae, Oliver Dickens
     Reference: Bootstrap
 */
 ?>

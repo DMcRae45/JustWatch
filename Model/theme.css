@@ -1,0 +1,29 @@
+.primaryDark
+{
+  background-color: #17181c;
+  color: #ffffff;
+}
+
+.secondaryDark
+{
+  background-color: #2a2c33;
+  color: #ffffff;
+}
+
+.primaryColour
+{
+  background-color: #498467;
+  color: black;
+}
+
+.secondaryColour
+{
+  background-color: #528788;
+  color: black;
+}
+
+.tertiaryColour
+{
+  background-color: #b2d3a8;
+  color: black;
+}

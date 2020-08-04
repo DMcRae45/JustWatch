@@ -7,7 +7,7 @@
 Include 'header.php';
 
 ?>
-
+<div>hello</div>
 <?php
   Include 'footer.php';
 ?>
