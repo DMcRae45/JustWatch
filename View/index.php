@@ -1,6 +1,8 @@
 <?php
 /*
-* Authers David McRae & Oliver Dickens
+  Landing page for users
+
+  Authers David McRae & Oliver Dickens
 */
 ?>
 
