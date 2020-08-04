@@ -4,6 +4,10 @@
 
   Authers David McRae & Oliver Dickens
 */
+Include 'header.php';
+
 ?>
 
-<div>Hello</div>
+<?php
+  Include 'footer.php';
+?>
