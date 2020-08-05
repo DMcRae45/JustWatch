@@ -1,7 +1,7 @@
 <?php
 /*
-    Description: Dundee Picture House Home Page used to display movies and navigation.
-    Author: David McRae, Aaron Hay
+    Description: Burner Movies for free viewing.
+    Author: David McRae, Oliver Dickens
 */
 ?>
 <html>
@@ -74,14 +74,13 @@ $nbsp = $cols - ($rows % $cols);
         echo'<div class="col-md-4">&nbsp;</div>';
       }
     }
-
     echo '</div></div><br>';
 ?>
 
-<!-- <footer> -->
-  <?php include 'include_footer.php'; ?>
 <!-- </footer> -->
-
-  <?php include '../Controller/bootstrapScript.php'; ?>
+  <?php
+  include 'include_footer.php';
+  include '../Controller/bootstrapScript.php';
+  ?>
 </body>
 </html>

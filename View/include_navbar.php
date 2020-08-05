@@ -1,14 +1,12 @@
 <?php
 
 /*
-    Description: Dundee Picture House Navigation bar at the top of each page.
-
-    Author: David McRae, Brad Mair, Aaron Hay
+    Description: Burner Movies for free viewing.
+    Author: David McRae, Oliver Dickens
     Reference: Bootstrap
 */
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="index.php"><img src="images/DPH.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
