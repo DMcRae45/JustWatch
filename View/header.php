@@ -24,4 +24,6 @@
     <?php
         include 'navigation.php';
     ?>
+
+    <div>bottom of the page</div>
 </head>
