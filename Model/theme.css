@@ -1,30 +1,24 @@
 /* Main Style Sheet */
-/*CSS FILE*/
-/*Colour Palatte:primaryDark(#17181c), secondaryDark(#2a2c33), primaryColour(#498467), secondaryColour(#528788), tertiaryColour( #b2d3a8)*/
 .primaryDark
 {
   background-color: #17181c;
   color: #ffffff;
 }
-
 .secondaryDark
 {
   background-color: #2a2c33;
   color: #ffffff;
 }
-
 .primaryColour
 {
   background-color: #498467;
   color: black;
 }
-
 .secondaryColour
 {
   background-color: #528788;
   color: black;
 }
-
 .tertiaryColour
 {
   background-color: #b2d3a8;
@@ -47,4 +41,74 @@ body
 @-ms-viewport{
   width: extend-to-zoom;
   zoom: 1.0;
+}
+
+/************************** Nav-Bar Style Sheet */
+#nav-bar{
+	position: sticky;
+  font-size:26px;
+  margin-top:0px;
+}
+
+
+.nav-item a:hover {
+  color: #498467;
+}
+.navbar-toggler{
+			background-color: #498467;
+}
+
+.w3-xxlarge{
+	padding-right: 50px
+}
+.nav-link{
+margin-top: auto;
+}
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #498467;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #498467;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+}
+/* pushes search bar left*/
+.form-inline{
+  padding-right: 200px;
+}
+/**********************************Footer */
+.relative-bottom
+{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding:10px;
+  background-color: #17181c;
+  color:#498467;
+}
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }

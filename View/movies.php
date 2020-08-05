@@ -5,7 +5,7 @@
 ?>
 
 <body>
-  <h1 class="w3-xxlarge text-uppercase text-center" ><b>Our Movies</b></h5>
+  <h1 class="w3-xxlarge text-uppercase text-center"><b>Our Movies</b></h5>
     <div class="d-flex align-content-start flex-wrap">
 
       <!-- This is a Prototype im working on -->

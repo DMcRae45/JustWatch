@@ -5,7 +5,7 @@
  */
 ?>
 
-<link rel="stylesheet" type="text/css" href="../Model/styleFooter.css">
+<link rel="stylesheet" type="text/css" href="../Model/theme.css">
 
 <footer class="relative-bottom page-footer font-small pt-4 text-light ">
 
