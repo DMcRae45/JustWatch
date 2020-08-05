@@ -17,29 +17,6 @@
 
     <ul class="navbar-nav mr-auto">
 
-<<<<<<< HEAD
-
-          <nav class="navbar navbar-light primaryDark justify-content-between">
-            <a class="navbar-brand"><img src="Images/fire.png" width="50px" height="50px" class="rounded-circle"></a>
-            <a class="navbar-brand primaryColour">Burner Movies</a>
-
-            <li class="nav-item tertiaryColour">
-              <a class="nav-link" href="../View/movies.php">Movies</a><!---to be set up-->
-            </li>
-            <li class="nav-item tertiaryColour">
-              <a class="nav-link" href="../View/series.php">Series</a><!---to be set up-->
-            </li>
-            <li class="nav-item tertiaryColour">
-              <a class="nav-link " href="../View/somepagehere.php">Genre</a><!---to be set up-->
-            </li>
-
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </nav>
-
-=======
         <li class="nav-item active">
             <a class="nav-link" href="index.php">Movies <span class="sr-only">(current)</span></a>
         </li>
@@ -96,7 +73,6 @@
         <div class='input-group-append'>
           <button id='search-by-title-button' name='search-by-title-button' type='submit' class='btn btn-outline-info'>Search</button>
         </div>
->>>>>>> 60bc3deec3a41cbde155a4566a516234231d8004
       </div>
     </form>
   </div>

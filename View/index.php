@@ -13,7 +13,7 @@
   ?>
 <!-- </head> -->
 <title>Burner - Home</title>
-</body>
+<body>
 <?php
   //Error Reporting for the users
   if(isset($_GET['error']))
