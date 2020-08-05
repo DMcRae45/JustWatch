@@ -9,32 +9,27 @@
 
   <section id="nav-bar" rel="">
 
-    <nav class="navbar navbar-expand-lg primaryDark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <a class="navbar-brand"><img src="Images/fire.png" width="50px" height="50px" class="rounded-circle"></a>
-        <h3 class="w3-xxlarge primaryColour"><b>Burner Movies</b></h3>
+          <nav class="navbar navbar-light primaryDark justify-content-between">
+            <a class="navbar-brand"><img src="Images/fire.png" width="50px" height="50px" class="rounded-circle"></a>
+            <a class="navbar-brand primaryColour">Burner Movies</a>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item tertiaryColour">
+              <a class="nav-link" href="../View/movies.php">Movies</a><!---to be set up-->
+            </li>
+            <li class="nav-item tertiaryColour">
+              <a class="nav-link" href="../View/series.php">Series</a><!---to be set up-->
+            </li>
+            <li class="nav-item tertiaryColour">
+              <a class="nav-link " href="../View/somepagehere.php">Genre</a><!---to be set up-->
+            </li>
 
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link" href="../View/movies.php">Movies</a><!---to be set up-->
-          </li>
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link" href="../View/series.php">Series</a><!---to be set up-->
-          </li>
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link " href="../View/somepagehere.php">Genre</a><!---to be set up-->
-          </li>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </nav>
 
-
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </div>
     </nav>
   </section>
