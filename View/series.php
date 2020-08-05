@@ -7,7 +7,7 @@
 <body>
   <h1 class="w3-xxlarge text-uppercase text-center" ><b>Our TV Shows</b></h5>
     <div class="d-flex align-content-start flex-wrap">
-
+//TODO import shows from database
       <!-- This is a Prototype im working on -->
       <div class="card text-center" style="width:14rem">
         <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" title="ReadyPlayerOne" alt="ReadyPlayerOne">
