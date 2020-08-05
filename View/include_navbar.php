@@ -9,7 +9,7 @@
 
   <section id="nav-bar" rel="">
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #17181c" >
+    <nav class="navbar navbar-expand-lg"  >
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,25 +19,17 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
           <li class="nav-item">
-            <a class="nav-link " href="../View/index.php">Home</a>
+            <a class="nav-link" href="../View/movies.php">Movies</a><!---to be set up-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../View/series.php">Series</a><!---to be set up-->
           </li>
           <li class="nav-item">
             <a class="nav-link " href="../View/somepagehere.php">Genre</a><!---to be set up-->
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../View/somepagehere.php">Movies</a><!---to be set up-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../View/somepagehere.php">TV-Shows</a><!---to be set up-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../View/somepagehere.php">Recently Added</a><!---to be set up-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../View/somepagehere.php">Random watching</a><!---to be set up-->
-          </li>
-        </ul>
+
 
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

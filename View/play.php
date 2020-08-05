@@ -1,9 +1,12 @@
 
-
 <?php
+/*
+    Description: this is the video player for movies and tv shows
+*/
+
+
   Include 'include_header.php';
   Include 'include_navbar.php';
-
 ?>
 
 <body>

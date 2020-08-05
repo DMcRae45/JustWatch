@@ -3,7 +3,7 @@
 /*Colour Palatte:primaryDark(#17181c), secondaryDark(#2a2c33), primaryColour(#498467), secondaryColour(#528788), tertiaryColour( #b2d3a8)*/
 .relative-bottom
 {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding:10px;
