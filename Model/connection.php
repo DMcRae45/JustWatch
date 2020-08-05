@@ -18,7 +18,7 @@ try
     // $un = 'root';
     // $pw = '';
 
-    $pdo = new PDO ("mysql:host=$host;dbname=$dbname;charset=UTF8",$un,$pw);
+    $connection = new PDO ("mysql:host=$host;dbname=$dbname;charset=UTF8",$un,$pw);
     //echo "Connection Successful";
 
 }
