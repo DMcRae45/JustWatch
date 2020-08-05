@@ -5,9 +5,9 @@
 ?>
 
 <body>
-  <h1 class="w3-xxlarge text-uppercase text-center"><b>Our Movies</b></h5>
+  <h1 class="w3-xxlarge text-uppercase text-center primaryColour"><b>Our Movies</b></h5>
     <div class="d-flex align-content-start flex-wrap">
-//TODO import movies from database
+
       <!-- This is a Prototype im working on -->
       <div class="card text-center" style="width:14rem">
         <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" title="ReadyPlayerOne" alt="ReadyPlayerOne">
