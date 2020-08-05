@@ -46,6 +46,8 @@ $nbsp = $cols - ($rows % $cols);
         echo '<div class="row">';
       }
 
+      // TODO: fix the single / double quote symbols - Davids Job
+
       echo "<div class='col-md-4 mt-4'>"; // open col
         echo '<div class="card">'; // Open card div
           echo '<a href="movie.php?id='.$movieArray[$i]->Movie_ID.'"> <img src="'.$movieArray[$i]->Image_link.'" class="card-img-top homePage" alt="Movie Poster" style="height: 30rem" onerror=this.src="images/film.placeholder.poster.jpg"></a>'; // card image
