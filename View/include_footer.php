@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="../Model/styleFooter.css">
 
-<footer class="relative-bottom page-footer font-small pt-4 text-light ">
+<footer class="relative-bottom page-footer font-small pt-4 primaryDark">
 
         <!-- Grid column -->
         <div class="text-center">
