@@ -7,7 +7,7 @@
 //Read All Movies
 function GetAllMovies()
 {
-    require 'dbConnection.php';
+    require_once 'connection.php';
 
     $sql = "SELECT * FROM Burn_Movie";
 

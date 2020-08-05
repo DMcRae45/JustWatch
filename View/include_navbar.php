@@ -1,40 +1,79 @@
-<!---This is a Prototype Navbar im working on david -------------------------->
+<?php
 
+/*
+    Description: Dundee Picture House Navigation bar at the top of each page.
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+    Author: David McRae, Brad Mair, Aaron Hay
+    Reference: Bootstrap
+*/
+?>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a href="index.php"><img src="images/DPH.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<link rel="stylesheet" type="text/css" href="../Model/theme.css">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-  <section id="nav-bar" rel="">
+    <ul class="navbar-nav mr-auto">
 
-    <nav class="navbar navbar-expand-lg primaryDark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <li class="nav-item active">
+            <a class="nav-link" href="index.php">Movies <span class="sr-only">(current)</span></a>
+        </li>
 
-      <a class="navbar-brand"><img src="Images/fire.png" width="50px" height="50px" class="rounded-circle"></a>
-        <h3 class="w3-xxlarge primaryColour"><b>Burner Movies</b></h3>
+        <li class="nav-item dropdown active">
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <?php
+                if(!isset($_SESSION['LoggedIn']))
+                {
+                    echo '<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>';
+                }
+                if(isset($_SESSION['LoggedIn']))
+                {
+                    echo '<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$_SESSION['username'].'</a>';
+                }
+            ?>
 
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link" href="../View/movies.php">Movies</a><!---to be set up-->
-          </li>
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link" href="../View/series.php">Series</a><!---to be set up-->
-          </li>
-          <li class="nav-item tertiaryColour">
-            <a class="nav-link " href="../View/somepagehere.php">Genre</a><!---to be set up-->
-          </li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
+            <?php
+                if(!isset($_SESSION['LoggedIn']))
+                {
+                  echo '<a class="dropdown-item" href="customerLogin.php">Login</a>';
+                  echo '<div class="dropdown-divider"></div>';  // divider between menu items
+                  echo '<a class="dropdown-item" href="registerCustomer.php">Register</a>';
+                }
+                if(isset($_SESSION['LoggedIn']) && isset($_SESSION['firstname']))
+                {
+                  echo "<a class='dropdown-item' href='userTicket.php'>My Tickets</a>";
+                  echo '<div class="dropdown-divider"></div>';
+                  echo '<a class="dropdown-item" href="../Controller/attempt_logout.php">LogOut</a>';
+                }
+                if(isset($_SESSION['jobrole']))
+                {
+                  echo "<a class='dropdown-item' href='insertMovie.php'>Insert Movie</a>";
+                  echo "<a class='dropdown-item' href='alterMovies.php'>Update Movie</a>";
+                  echo "<a class='dropdown-item' href='removeMovie.php'>Remove Movie</a>";
+                  echo '<div class="dropdown-divider"></div>';
+                  echo "<a class='dropdown-item' href='insertShowing.php'>Insert Showing</a>";
+                  echo '<div class="dropdown-divider"></div>';
+                  echo "<a class='dropdown-item' href='manageEmployees.php'>Manage Employees</a>";
+                  echo "<a class='dropdown-item' href='registerEmployee.php'>Register New Employee</a>";
+                  echo '<div class="dropdown-divider"></div>';
+                  echo '<a class="dropdown-item" href="../Controller/attempt_logout.php">LogOut</a>';
+                }
+            ?>
+            </div>
+        </li>
+    </ul>
 
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    <form action='searchResults.php' method='post' class="form-inline my-2 my-lg-0">
+      <div class='input-group input-group-sm'>
+        <input type='text' class='form-control' placeholder="Movie search..." aria-label='Small' aria-describedby='inputGroup-sizing-sm' id='searchTitle' name='searchTitle'>
+        <div class='input-group-append'>
+          <button id='search-by-title-button' name='search-by-title-button' type='submit' class='btn btn-outline-info'>Search</button>
+        </div>
       </div>
-    </nav>
-  </section>
+    </form>
+  </div>
+</nav>

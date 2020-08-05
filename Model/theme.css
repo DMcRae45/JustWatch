@@ -93,16 +93,6 @@ margin-top: auto;
   padding-right: 200px;
 }
 /**********************************Footer */
-.relative-bottom
-{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding:10px;
-  background-color: #17181c;
-  color:#498467;
-}
-
 @media (max-width:767px)
 {
   .social-icons li.title
