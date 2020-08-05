@@ -1,3 +1,6 @@
+/* Main Style Sheet */
+/*CSS FILE*/
+/*Colour Palatte:primaryDark(#17181c), secondaryDark(#2a2c33), primaryColour(#498467), secondaryColour(#528788), tertiaryColour( #b2d3a8)*/
 .primaryDark
 {
   background-color: #17181c;
@@ -26,4 +29,22 @@
 {
   background-color: #b2d3a8;
   color: black;
+}
+
+html{
+  font-family: Helvetica, sans-serif;
+}
+body
+{
+  font-size: 19px;
+  background:#2a2c33;
+  background-size: cover;
+}
+@viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
 }

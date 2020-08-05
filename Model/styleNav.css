@@ -1,0 +1,61 @@
+/* Nav-Bar Style Sheet */
+/*CSS FILE*/
+/*Colour Palatte:primaryDark(#17181c), secondaryDark(#2a2c33), primaryColour(#498467), secondaryColour(#528788), tertiaryColour( #b2d3a8)*/
+#nav-bar{
+	position: sticky;
+  font-size:26px;
+  margin-top:0px;
+}
+/*Navbar Colours*/
+.navbar{
+		background-color: #17181c;
+}
+.nav-item{
+	color: #498467;
+}
+.nav-item a:hover {
+  color: #b2d3a8;
+}
+
+.w3-xxlarge{
+	  color: #498467;
+}
+
+
+
+
+
+.w3-xxlarge{
+	padding-right: 50px
+}
+.nav-link{
+margin-top: auto;
+}
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #498467;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #498467;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+}
+/* pushes search bar left*/
+.form-inline{
+  padding-right: 200px;
+}
