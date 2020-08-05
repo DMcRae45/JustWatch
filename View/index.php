@@ -10,10 +10,11 @@
   include '../Controller/session.php';
   include '../Controller/getAllMovies.php';
   include 'include_header.php';
+  include 'include_navbar.php';
   ?>
 <!-- </head> -->
 <title>Burner - Home</title>
-</body>
+<body>
 <?php
   //Error Reporting for the users
   if(isset($_GET['error']))
@@ -47,7 +48,7 @@ $nbsp = $cols - ($rows % $cols);
 
       echo "<div class='col-md-4 mt-4'>"; // open col
         echo '<div class="card">'; // Open card div
-          echo '<a href="movie.php?id='.$movieArray[$i]->Movie_ID.'"> <img src="'.$movieArray[$i]->Image_Link.'" class="card-img-top homePage" alt="Movie Poster" style="height: 30rem" onerror=this.src="images/film.placeholder.poster.jpg"></a>'; // card image
+          echo '<a href="movie.php?id='.$movieArray[$i]->Movie_ID.'"> <img src="'.$movieArray[$i]->Image_link.'" class="card-img-top homePage" alt="Movie Poster" style="height: 30rem" onerror=this.src="images/film.placeholder.poster.jpg"></a>'; // card image
           echo '<div class="card-body">';// open card body
             echo '<h5 class="card-title">'.$movieArray[$i]->Title.'</h5>'; // card title
           echo '</div>';// close card body

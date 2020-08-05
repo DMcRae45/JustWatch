@@ -9,7 +9,7 @@ function GetAllMovies()
 {
     require_once 'connection.php';
 
-    $sql = "SELECT * FROM Burn_Movie";
+    $sql = "SELECT * FROM burn_movie";
 
     $stmt = $connection->prepare($sql);
     $result = $stmt->fetch();
