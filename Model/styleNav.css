@@ -11,12 +11,11 @@
 		background-color: #17181c;
 }
 .nav-item{
-	color: #498467;
+	color: #b2d3a8;
 }
 .nav-item a:hover {
-  color: #b2d3a8;
+  color: #498467;
 }
-
 .w3-xxlarge{
 	  color: #498467;
 }

@@ -13,7 +13,7 @@
     <div class="d-flex align-content-start flex-wrap">
 
       <!-- This is a Prototype im working on -->
-      <div class="card text-center" style="width:14rem; background-color: #17181c">
+      <div class="card text-center" style="width:14rem">
         <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" title="ReadyPlayerOne" alt="ReadyPlayerOne">
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
               Ready Player One
@@ -40,22 +40,6 @@
                 </div>
               </div>
 <!-- End of Prototype-->
-
-      <div class="card text-center" style="width:14rem;background-color: #498467">
-        <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" title="ReadyPlayerOne" alt="ReadyPlayerOne">
-        <h5 class="card-title text-uppercase">Ready Player One</h5>
-        <a href="movie.php" target="_blank">Play</a>
-      </div>
-      <div class="card" style="width: 14rem;">
-        <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" alt="Card image cap">
-        <h5 class="card-title">Ready Player One</h5>
-        <a href="movie.php" target="_blank">Play</a>
-      </div>
-      <div class="card" style="width: 14rem;">
-        <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" alt="Card image cap">
-        <h5 class="card-title">Ready Player One</h5>
-        <a href="movie.php" target="_blank">Play</a>
-      </div>
     </div>
 </body>
 
