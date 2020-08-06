@@ -37,20 +37,18 @@ $nbsp = $cols - ($rows % $cols);
         echo '<div class="row">';
       }
 
-      // TODO: fix the single / double quote symbols - Davids Job
-
       echo "<div class='col-md-4 mt-4'>"; // open col
-        echo '<div class="card primaryDark border border-success">'; // Open card div
-          echo '<a href="play.php?id='.$movieArray[$i]->Movie_ID.'"> <img src="'.$movieArray[$i]->Image_link.'" class="card-img-top homePage" alt="Movie Poster" style="height: 30rem" onerror=this.src="images/film.placeholder.poster.jpg"></a>'; // card image
-          echo '<div class="card-body">';// open card body
-            echo '<h5 class="card-title">'.$movieArray[$i]->Title.'</h5>'; // card title
-          echo '</div>';// close card body
-          echo '<ul class="list-group list-group-flush">'; // start list inside the card
-            echo '<li class="list-group-item primaryDark">Genre: <text>'.$movieArray[$i]->Genre.'</text></li>';
-          echo ' </ul>'; // end list in the card
+        echo "<div class='card primaryDark border border-success'>"; // Open card div
+          echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."' class='card-img-top homePage' alt='Movie Poster' style='height: 30rem' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
+          echo "<div class='card-body'>";// open card body
+            echo "<h5 class='card-title'>".$movieArray[$i]->Title."</h5>"; // card title
+          echo "</div>";// close card body
+          echo "<ul class='list-group list-group-flush'>"; // start list inside the card
+            echo "<li class='list-group-item primaryDark'>Genre: <text>".$movieArray[$i]->Genre."</text></li>";
+          echo "</ul>"; // end list in the card
           echo "<a class='btn btn-success' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>"; // more info button
-        echo ' </div>';// close card
-      echo ' </div>';// close col
+        echo "</div>";// close card
+      echo "</div>";// close col
 
 
       if(($counter % $cols) == 0)
