@@ -21,7 +21,7 @@
 }
 .tertiaryColour
 {
-  background-color: #b2d3a8;
+  background-color: #F7A416;
   color: black;
 }
 .btn-outline-primary {
@@ -30,9 +30,21 @@
 }
 .btn-outline-primary:hover{
   background-color: #498467;
-  color: black;
+  color: #ffffff;
   border-color: #498467;
 }
+.btn-outline-danger {
+  color: #E50914;
+  border-color: #E50914;
+}
+.btn-outline-danger:hover{
+  background-color: #E50914;
+  color: black;
+  border-color: #E50914;
+}
+
+
+
 
 text, .text
 {
