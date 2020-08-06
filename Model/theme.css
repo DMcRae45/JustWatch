@@ -39,12 +39,21 @@ text, .text
   color: #ffffff;
 }
 
+.form-control, .input-group-text, .custom-select, .list-group-item
+{
+  background-color: #2a2c33;
+  color: #ffffff;
+}
+
 html, body
 {
   font-family: Helvetica, sans-serif;
   background-color: #17181c;
 }
-
+footer
+{
+  bottom: 0px;
+}
 @viewport
 {
   zoom: 1.0;
