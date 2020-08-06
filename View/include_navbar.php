@@ -13,7 +13,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent ">
 
     <ul class="navbar-nav mr-auto">
 
@@ -22,7 +22,7 @@
         </li>
 
         <li class="nav-item active">
-            <a class="nav-link" href="series.php">Series<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="series.php">Series<span class="sr-only"></span></a>
         </li>
 
         <li class="nav-item dropdown active">
@@ -59,4 +59,9 @@
         </li>
     </ul>
   </div>
+
+  <div class='col-md-6 mt-5'>
+    <a class='btn btn-outline-warning' href='adminNavigation.php'>Admin</a>
+    </div>
+
 </nav>

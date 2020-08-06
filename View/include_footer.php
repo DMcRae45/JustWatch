@@ -3,9 +3,10 @@
     Description: Footer for each page.
     Author: David McRae, Oliver Dickens
  */
+   //TODO: Oli fix footer to base of page
 ?>
-<footer class="relative-bottom page-footer font-small pt-4 bg-dark">
 
+<footer class="reletive-bottom font-small pt-4 secondaryDark" style="bottom: 0; width: 100%;">
         <!-- Grid column -->
         <div class="text-center">
           <!-- Content -->
@@ -14,11 +15,9 @@
         </div>
 
         <!-- Authors -->
-        <div class="footer-copyright text-center py-3">
+        <div class="footer-copyright text-center pt-3">
           © David McRae
           </br>
           © Oliver Dickens
-          </br>
-          </br>
         </div>
 </footer>
