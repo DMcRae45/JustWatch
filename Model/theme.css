@@ -2,7 +2,7 @@
 .primaryDark
 {
   background-color: #17181c;
-  color: #ffffff;
+  color: #498467;
 }
 .secondaryDark
 {
@@ -24,21 +24,25 @@
   background-color: #b2d3a8;
   color: black;
 }
-
-html{
-  font-family: Helvetica, sans-serif;
-}
-body
+text, .text
 {
-  font-size: 19px;
-  background:#2a2c33;
-  background-size: cover;
+  color: #ffffff;
 }
-@viewport{
+
+html, body
+{
+  font-family: Helvetica, sans-serif;
+  background-color: #17181c;
+}
+
+@viewport
+{
   zoom: 1.0;
   width: extend-to-zoom;
 }
-@-ms-viewport{
+
+@-ms-viewport
+{
   width: extend-to-zoom;
   zoom: 1.0;
 }
