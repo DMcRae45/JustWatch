@@ -45,11 +45,11 @@ $nbsp = $cols - ($rows % $cols);
           echo "</div>";// close card body
           echo "<ul class='list-group list-group-flush'>"; // start list inside the card
             echo "<li class='list-group-item primaryDark'>Genre: <text>".$movieArray[$i]->Genre."</text></li>";
+            echo "<li class='list-group-item primaryDark'>Year: <text>".$movieArray[$i]->Year."</text></li>";
           echo "</ul>"; // end list in the card
           echo "<a class='btn btn-success' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>"; // more info button
         echo "</div>";// close card
       echo "</div>";// close col
-
 
       if(($counter % $cols) == 0)
       {
