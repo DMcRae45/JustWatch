@@ -1,7 +1,7 @@
 <?php
-  Include 'include_header.php';
-  Include 'include_navbar.php';
-
+include '../Controller/session.php';
+include '../Controller/getAllSeries.php';
+include 'include_header.php';
 ?>
 
 <body>
@@ -19,7 +19,7 @@
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Movie Title Here</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Series Title Here</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>

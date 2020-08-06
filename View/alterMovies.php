@@ -28,7 +28,7 @@ echo "
   <title>Burn - Alter Movies</title>
 <body>
 <br>
-<div class='container'>
+<div class='container primaryDark' >
   <div class='page-header'>
     <h3>Alter Movie Records</h3>
   </div>";
@@ -89,6 +89,14 @@ if (isset($_GET['id']))
               <input class='form-control' type='text' name='genre' placeholder='Genre' value='".$movieArray->Genre."' required>
           </div>";
 
+          echo "<div class='form-group input-group' form-group-lg>
+            <div class='input-group-prepend'>
+              <span class='input-group-text' id='inputGroupPrepend'>Year</span>
+            </div>
+              <input class='form-control' type='text' name='year' placeholder='2020' value='".$movieArray->Year."' required>
+          </div>";
+
+
           echo "<button class='form-control' type='submit' name='updateMovieSubmit'>Update Movie</button>
       </div>
     </form>";
@@ -98,7 +106,7 @@ else
   include '../Controller/getAllMovies.php';
 
   echo "
-  <table class='table border border-dark text-center mt-4'>
+  <table class='table border border-dark text-center mt-4 primaryDark'>
     <thead class='thead-dark'>
         <tr>
           <th scope='col'>Movie ID</th>

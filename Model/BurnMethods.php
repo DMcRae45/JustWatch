@@ -110,7 +110,6 @@ function CreateUser()
     else
     {
       echo "Insert Failed";
-      echo $query -> errorInfo()[2];
     }
   }
 }
@@ -217,7 +216,7 @@ function AttemptInsertMovie()
             if ($fileError === 0)
             {
                 // Checks file size is below stated value
-                if ($fileSize < 1000000)
+                if ($fileSize < 2000000)
                 {
                     // Gives file a unique id to stop overwriting of files with same name
                     $fileNameNew = uniqid('', true) . "." . $fileActualExt;
@@ -232,13 +231,14 @@ function AttemptInsertMovie()
                     $image = $fileDestination;
                     $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
                     $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
+                    $year = (filter_input(INPUT_POST, 'year',FILTER_SANITIZE_STRING ));
 
 
                     $Error = false;
                     $videoError;
                     $descriptionError;
                     $genreError;
-
+                    //TODO: Insert year preg
                     if(!preg_match("/^[a-zA-Z ]*$/",$genre))
                     {
                       $Error = true;
@@ -256,8 +256,8 @@ function AttemptInsertMovie()
                     $query = $connection->prepare
                     ("
 
-                    INSERT INTO burn_movie (Title, Video_link, Image_link, Description, Genre)
-                    VALUES (:title, :video, :image, :description, :genre)
+                    INSERT INTO burn_movie (Title, Video_link, Image_link, Description, Genre, Year)
+                    VALUES (:title, :video, :image, :description, :genre, :year)
 
                     ");
 
@@ -267,7 +267,9 @@ function AttemptInsertMovie()
                       'video' => $video,
                       'image' => $image,
                       'description' => $description,
-                      'genre' => $genre
+                      'genre' => $genre,
+                      'year' => $year
+
                     ]);
 
                     $count = $query->rowCount();
@@ -344,7 +346,7 @@ function AttemptUpdateMovie()
           if ($fileError === 0)
           {
           // Checks file size is below stated value
-          if ($_FILES['image_link']['size'] < 1000000 || isset($oldImage))
+          if ($_FILES['image_link']['size'] < 2000000 || isset($oldImage))
           {
             if (!isset($oldImage))
             {
@@ -374,12 +376,13 @@ function AttemptUpdateMovie()
               $image = $fileDestination;
               $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
               $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
+              $year = (filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING));
 
               $Error = false;
               $videoError;
               $descriptionError;
               $genreError;
-
+              //TODO: preg match
               if(!preg_match("/^[a-zA-Z ]*$/",$genre))
               {
                 $Error = true;
@@ -402,7 +405,8 @@ function AttemptUpdateMovie()
               Video_link = :video,
               Image_link = :image,
               Description =:description,
-              Genre = :genre
+              Genre = :genre,
+              Year = :year
               WHERE Movie_ID = ".$movieid."
 
               ");
@@ -413,7 +417,8 @@ function AttemptUpdateMovie()
                 'video' => $video,
                 'image' => $image,
                 'description' => $description,
-                'genre' => $genre
+                'genre' => $genre,
+                'year' => $year
               ]);
 
               $count = $query->rowCount();
@@ -426,7 +431,6 @@ function AttemptUpdateMovie()
               {
                 $invalidError = "Insert Failed";
                 header('location: ../View/alterMovies.php?error='.$invalidError);
-                echo $query -> errorInfo()[2];
               }
             }
           }
@@ -449,7 +453,7 @@ function AttemptUpdateMovie()
         }
     }
 }
-
+//TODO: When movie deleted include image delete as that sticks around
 //Delete Movie from database
 function RemoveMovieByID($movieid)
 {
@@ -465,7 +469,7 @@ function RemoveMovieByID($movieid)
     'movieid' => $movieid
   ]);
 
-  if($success && $stmtMovie->rowCount() > 0)
+  if($success && $stmt->rowCount() > 0)
   {
     header('location: ../View/removeMovie.php');
   }

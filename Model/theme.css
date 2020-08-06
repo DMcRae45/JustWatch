@@ -24,6 +24,16 @@
   background-color: #b2d3a8;
   color: black;
 }
+.btn-outline-primary {
+  color: #498467;
+  border-color: #498467;
+}
+.btn-outline-primary:hover{
+  background-color: #498467;
+  color: black;
+  border-color: #498467;
+}
+
 text, .text
 {
   color: #ffffff;

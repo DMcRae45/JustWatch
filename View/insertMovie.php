@@ -24,7 +24,7 @@ if(isset($_SESSION['username']))
       </head>
 
       <body>
-        <div class='container'>
+        <div class='container primaryDark'>
           <div class='page-header'>
               <h1>Insert Page</h1>
           </div>
@@ -67,6 +67,13 @@ if(isset($_SESSION['username']))
                       <span class='input-group-text' id='inputGroupPrepend'>Genre</span>
                     </div>
                       <input class='form-control' type='text' name='genre' placeholder='Genre' required>
+                  </div>
+
+                  <div class='form-group input-group' form-group-lg>
+                    <div class='input-group-prepend'>
+                      <span class='input-group-text' id='inputGroupPrepend'>Year</span>
+                    </div>
+                      <input class='form-control' type='text' name='year' placeholder='2020' required>
                   </div>
 
                   <button class='form-control' type='submit' name='insertMovieSubmit'>Insert Movie</button>

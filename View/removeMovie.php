@@ -12,7 +12,7 @@ echo "
 </head>
 
 <body>
-  <div class='container'>
+  <div class='container primaryDark'>
     <div class='page-header'>
         <h1>Remove a Movie</h1>
     </div>
@@ -49,7 +49,7 @@ echo "
                       </div>
                       <div class='modal-footer'>
                         <button type='button' class='btn btn-outline-warning' data-dismiss='modal'>No!</button>
-                        <a class='btn btn-outline-danger' role='button' href='../Controller/attempt_removeMovie.php?id=".$movieArray[$i]->Movie_ID."'>DELETE</a>
+                        <a class='btn btn-outline-danger' role='button' href='../Controller/attemptRemoveMovie.php?id=".$movieArray[$i]->Movie_ID."'>DELETE</a>
                       </div>
                     </div>
                   </div>

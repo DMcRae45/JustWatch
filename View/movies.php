@@ -1,43 +1,77 @@
+<!DOCTYPE html>
 <?php
-  Include 'include_header.php';
-  Include 'include_navbar.php';
+/*
+    Description: Burner Movies for free viewing.
+    Author: David McRae, Oliver Dickens
+*/
+?>
+<html>
+<!--<head>-->
+  <?php
+  include '../Controller/session.php';
+  include '../Controller/getAllMovies.php';
+  include 'include_header.php';
+  ?>
+<!-- </head> -->
+<title>Burner - All Movies</title>
+<body>
+<?php
+  //Error Reporting for the users
+  if(isset($_GET['error']))
+  {
+    $error = $_GET['error'];
+    echo $error;
+  }
+?>
+<div class="container">
+<?php
+$rows = 0;
+$cols = 3;
+$counter = 1;
+$nbsp = $cols - ($rows % $cols);
+    for ($i=0 ; $i < sizeof($movieArray) ; $i++)
+    {
 
+      if(($counter % $cols) == 1)
+      {
+        echo '<div class="row">';
+      }
+
+      echo "<div class='col-md-4 mt-4'>"; // open col
+        echo "<div class='card primaryDark border border-success'>"; // Open card div
+          echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."' class='card-img-top homePage' alt='Movie Poster' style='height: 30rem' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
+          echo "<div class='card-body'>";// open card body
+            echo "<h5 class='card-title'>".$movieArray[$i]->Title."</h5>"; // card title
+          echo "</div>";// close card body
+          echo "<ul class='list-group list-group-flush'>"; // start list inside the card
+            echo "<li class='list-group-item primaryDark'>Genre: <text>".$movieArray[$i]->Genre."</text></li>";
+            echo "<li class='list-group-item primaryDark'>Year: <text>".$movieArray[$i]->Year."</text></li>";
+          echo "</ul>"; // end list in the card
+          echo "<a class='btn btn-success' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>"; // more info button
+        echo "</div>";// close card
+      echo "</div>";// close col
+
+      if(($counter % $cols) == 0)
+      {
+          echo '</div>';
+      }
+      $counter++;
+    }
+
+    if($nbsp > 0)
+    {
+      for ($i = 0; $i < $nbsp; $i++)
+      {
+        echo'<div class="col-md-4">&nbsp;</div>';
+      }
+    }
+    echo '</div></div><br>';
 ?>
 
-<body>
-  <h1 class="w3-xxlarge text-uppercase text-center primaryColour"><b>Our Movies</b></h5>
-    <div class="d-flex align-content-start flex-wrap">
-
-      <!-- This is a Prototype im working on -->
-      <div class="card text-center" style="width:14rem">
-        <img class="card-img-top" src="Images/ReadyPlayerOne.jpg" title="ReadyPlayerOne" alt="ReadyPlayerOne">
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-              Ready Player One
-            </button>
-            <!-- Modal -->
-              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Movie Title Here</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        movie description in here
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a class="btn btn-outline-success my-2 my-sm-0" href="play.php" role="button">Play</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-<!-- End of Prototype-->
-
-
-
-    </div>
+<!-- </footer> -->
+  <?php
+  include 'include_footer.php';
+  include '../Controller/bootstrapScript.php';
+  ?>
 </body>
+</html>
