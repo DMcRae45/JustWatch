@@ -21,7 +21,6 @@ if(!isset($_SESSION['username']))
 }
 else
 {
-  include '../Controller/getAllMovies.php';
   include 'include_header.php';
 
 echo "
@@ -98,6 +97,8 @@ if (isset($_GET['id']))
 }
 else
 {
+  include '../Controller/getAllMovies.php';
+  
   echo "
   <table class='table border border-dark text-center mt-4'>
     <thead class='thead-dark'>
