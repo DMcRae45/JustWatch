@@ -5,7 +5,6 @@
 */
 
   Include 'include_header.php';
-  Include 'include_navbar.php';
 ?>
 
 <?php
