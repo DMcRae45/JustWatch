@@ -256,7 +256,7 @@ function AttemptInsertMovie()
                     $query = $connection->prepare
                     ("
 
-                    INSERT INTO burn_movie (Title, Video_Link, Image_Link, Description, Genre)
+                    INSERT INTO burn_movie (Title, Video_link, Image_link, Description, Genre)
                     VALUES (:title, :video, :image, :description, :genre)
 
                     ");
@@ -310,8 +310,8 @@ function AttemptUpdateMovie()
     // Checks if submit button has been pressed
     if (isset($_POST['updateMovieSubmit']))
     {
-      $index = (filter_input(INPUT_POST, 'index', FILTER_SANITIZE_STRING));
-      $movieEncode = getMovieByID($index);
+      $movieid = (filter_input(INPUT_POST, 'index', FILTER_SANITIZE_STRING));
+      $movieEncode = getMovieByID($movieid);
       $movie_details = json_decode($movieEncode);
       $file = $_FILES['image_link'];
 
@@ -335,7 +335,7 @@ function AttemptUpdateMovie()
       }
       else
       {
-        $oldImage = $movie_details->Image_Link;
+        $oldImage = $movie_details->Image_link;
       }
         // Checks if file is an allowed type
         if (isset($newImage) || isset($oldImage))
@@ -350,7 +350,7 @@ function AttemptUpdateMovie()
             {
               try
               {
-                unlink($movie_details->Image_Link);
+                unlink($movie_details->Image_link);
               }
               catch (Exception $e)
               {
@@ -397,11 +397,16 @@ function AttemptUpdateMovie()
               $query = $connection->prepare
               ("
 
-              UPDATE burn_movie (Title, Video_Link, Image_Link, Description, Genre)
-              VALUES (:title, :video, :image, :description, :genre)
-              WHERE Movie_ID = ".$index."
+              UPDATE burn_movie SET
+              Title = :title,
+              Video_link = :video,
+              Image_link = :image,
+              Description =:description,
+              Genre = :genre
+              WHERE Movie_ID = ".$movieid."
 
               ");
+
               $success = $query->execute
               ([
                 'title' => $title,
@@ -421,7 +426,7 @@ function AttemptUpdateMovie()
               {
                 $invalidError = "Insert Failed";
                 header('location: ../View/alterMovies.php?error='.$invalidError);
-                //echo $query -> errorInfo()[2];
+                echo $query -> errorInfo()[2];
               }
             }
           }
@@ -433,7 +438,7 @@ function AttemptUpdateMovie()
         }
         else
         {
-            $invalidError = "There was an error uploading your file!";
+            $invalidError = "File was too large!";
             header('location: ../View/alterMovies.php?error='.$invalidError);
         }
       }

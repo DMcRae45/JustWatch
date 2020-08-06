@@ -3,7 +3,7 @@
 /*
     Description: this is the video player for movies and tv shows
 */
-
+  Include '../Controller/session.php';
   Include 'include_header.php';
   Include '../Controller/getMovieByID.php';
 ?>
