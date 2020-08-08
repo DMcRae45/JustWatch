@@ -5,6 +5,7 @@
  */
  include 'include_header.php';
  //TODO: footer logo is 100% and massive, needs resized and positioned bottom
+ //TODO: when recently added movies or a home screen is made change href in footer 
 ?>
 
 <html>
@@ -16,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-2 col-xl-12">
                         <div class="footer_logo wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                            <a href="index.php">
+                            <a href="movies.php">
                               <div class = "showcase-top">
                                 <img src="Images/logo.png" alt="BurnerMovies">
                               </div>
