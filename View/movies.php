@@ -38,7 +38,7 @@ $nbsp = $cols - ($rows % $cols);
       }
 
       echo "<div class='col-md-4 mt-4'>"; // open col
-        echo "<div class='card primaryDark border border-success'>"; // Open card div
+        echo "<div class='card secondaryColour border border-success'>"; // Open card div
           echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."' class='card-img-top homePage' alt='Movie Poster' style='height: 30rem' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
           echo "<div class='card-body'>";// open card body
             echo "<h5 class='card-title'>".$movieArray[$i]->Title."</h5>"; // card title
@@ -47,7 +47,7 @@ $nbsp = $cols - ($rows % $cols);
             echo "<li class='list-group-item primaryDark'>Genre: <text>".$movieArray[$i]->Genre."</text></li>";
             echo "<li class='list-group-item primaryDark'>Year: <text>".$movieArray[$i]->Year."</text></li>";
           echo "</ul>"; // end list in the card
-          echo "<a class='btn btn-success' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>"; // more info button
+          echo "<a class='btn primaryColour' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>"; // more info button
         echo "</div>";// close card
       echo "</div>";// close col
 

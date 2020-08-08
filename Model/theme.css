@@ -1,22 +1,22 @@
-/* Main Style Sheet */
+/* Color Styles  */
 .primaryDark
 {
-  background-color: #17181c;
-  color: #498467;
+  background-color: #17181C;
+  color: #ffffff;
 }
 .secondaryDark
 {
-  background-color: #2a2c33;
+  background-color: #474B4F;
   color: #ffffff;
 }
 .primaryColour
 {
-  background-color: #498467;
+  background-color: #86C232;
   color: black;
 }
 .secondaryColour
 {
-  background-color: #528788;
+  background-color: #61892F;
   color: black;
 }
 .tertiaryColour
@@ -24,15 +24,17 @@
   background-color: #F7A416;
   color: black;
 }
+/* Button Styles  */
 .btn-outline-primary {
-  color: #498467;
-  border-color: #498467;
+  color: #86C232;
+  border-color: #86C232;
 }
 .btn-outline-primary:hover{
-  background-color: #498467;
-  color: #ffffff;
-  border-color: #498467;
+  background-color: #86C232;
+  color: black;
+  border-color: #86C232;
 }
+
 .btn-outline-danger {
   color: #E50914;
   border-color: #E50914;
@@ -44,11 +46,82 @@
 }
 
 
-
+html, body
+{
+  font-family: Helvetica, sans-serif;
+  background-color: #17181c;
+}
+body.testPage
+{
+  font-family: Helvetica, sans-serif;
+  background-color: #17181c;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+}
 
 text, .text
 {
   color: #ffffff;
+}
+h1,h2,h3,h4
+{
+  color: #ffffff;
+}
+a
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+p
+{
+  margin: 0.5rem 0;
+}
+/* this makes all images 100% inside of there divs or containers */
+img {
+  width: 100%;
+}
+/* Our showcase is on our test page soon to be index page */
+/* this adjusts the size of our showcase*/
+.showcase{
+  width:100%;
+  height: 100vh;
+  postition: relative;
+  background: url('Images/underconstruction.jpg')no-repeat center center/cover;
+}
+.showcase-top{
+  position: relative;
+  height: 90px;
+}
+.showcase-top a{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+/* this controls sign in button and position */
+.showcase-2{
+  top: 15%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+/* this controls logo size and position */
+.showcase-top img{
+width: 250px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.showcase-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
 }
 
 .form-control, .input-group-text, .custom-select, .list-group-item
@@ -57,11 +130,7 @@ text, .text
   color: #ffffff;
 }
 
-html, body
-{
-  font-family: Helvetica, sans-serif;
-  background-color: #17181c;
-}
+/**********************************Footer */
 footer
 {
   bottom: 0px;
@@ -77,9 +146,6 @@ footer
   width: extend-to-zoom;
   zoom: 1.0;
 }
-
-
-/**********************************Footer */
 @media (max-width:767px)
 {
   .social-icons li.title

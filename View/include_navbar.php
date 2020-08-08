@@ -7,7 +7,7 @@
     Reference: Bootstrap
 */
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="mb-2 navbar navbar-expand-lg navbar-dark secondaryDark">
   <a href="index.php"><img src="images/fire.png" class="rounded-circle" style="width: 50px; height: 50px;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,12 +18,16 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-            <a class="nav-link" href="movies.php">Movies<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="movies.php">Movies<span class="sr-only">(current)</span></a>
         </li>
 
         <li class="nav-item active">
             <a class="nav-link" href="series.php">Series<span class="sr-only"></span></a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="testPage.php">TestNewIndexPage<span class="sr-only"></span></a>
+        </li>
+
 
         <li class="nav-item dropdown active">
 
