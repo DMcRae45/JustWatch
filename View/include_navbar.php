@@ -4,9 +4,10 @@
     Author: David McRae, Oliver Dickens
 */
 include 'include_header.php';
-//TODO: when screen size set to phone screen nav disappears
 //TODO:code up years and genre
 //TODO: login displays when mange is pressed
+//TODO: when screen size set to phone screen nav disappears
+//TODO: when screen size = make nav bar visable
 ?>
 <body>
     <!--[if lte IE 9]>
@@ -51,7 +52,9 @@ include 'include_header.php';
                                                 <li><a href="#">2018</a></li>
                                             </ul>
                                         </li>
-
+                                        <li class="nav-item active">
+                                          <a class="nav-link" href="testPage.php">TestingPage(Devs only)<span class="sr-only"></span></a>
+                                        </li>
                                         <li class="nav-item dropdown active">
                                           <ul class="submenu">
                                               <li><a href='insertMovie.php'>Insert Movie</a></li>
@@ -87,10 +90,6 @@ include 'include_header.php';
                                                 }
                                             ?>
                                             </div>
-                                        </li>
-
-                                        <li class="nav-item active">
-                                          <a class="nav-link" href="testPage.php">TestingPage<span class="sr-only"></span></a>
                                         </li>
                                     </ul>
                                 </nav>

@@ -14,7 +14,7 @@ include 'include_navbar.php';
 ?>
 <html>
 <body id ="testPage">
-    <header class="showcaseUnderConstruction" style='margin-top:15%'>
+    <header class="showcaseUnderConstruction" style='margin-top:5%'>
 
   </header>
 
