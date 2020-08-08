@@ -39,13 +39,13 @@ if(isset($_SESSION['username']))
       echo "
       <html>
       <head>
-      <title>Burn - Insert Movie</title>
+
       </head>
 
       <body>
         <div class='container primaryDark'>
           <div class='page-header'>
-              <h1>Insert Page</h1>
+              <h1 class='primaryDark'>Insert Movie</h1>
           </div>
 
           <div class='container'>

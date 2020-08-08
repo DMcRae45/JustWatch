@@ -1,24 +1,19 @@
 <?php
-/*
-    Description: Customer login form
-
-    Author: David McRae, Oliver Dickens
- */
-
-?>
-<html>
-  <?php
+  /*
+      Description: Customer login form
+      Author: David McRae, Oliver Dickens
+   */
     include '../Controller/session.php';
     include 'include_header.php';
     //include 'include_navbar.php';
-//TODO: fix this page casue if we include navbar the username div cuts off
-  ?>
-<body>
-
-<div class="container margin-top:5%">
-
-  <div class="container">
-
+    //TODO: fix this page casue if we include navbar the username div cuts off
+?>
+<html>
+  <body>
+      <header class="showcase" style='margin-top:15%'>
+        <div class="container">
+          <div class="container">
+            <h1 class='primaryDark'>Sign In</h1>
     <?php
     //Error Reporting for the user
     if(isset($_GET['error']))
@@ -42,20 +37,17 @@
             You cannot Leave This field Empty.
           </div>
       </div>
-
         <button class="form-control" type="submit" name="LoginSubmit" value="Login">Login</button>
-
     </form>
-
 </div>
 </div><!-- end of container-->
-<footer>
-      <?php include 'include_footer.php'; ?>
-</footer> 
 
 <?php
 require '../Controller/bootstrapScript.php';
 require '../Controller/ValidateEmptyFields.js';
 ?>
 </body>
+<footer>
+      <?php include 'include_footer.php'; ?>
+</footer>
 </html>
