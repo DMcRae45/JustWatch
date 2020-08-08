@@ -23,7 +23,7 @@ include 'include_header.php';
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="movies.php">
-                                    <img src="Images/temporary_logo.png" alt="">
+                                    <img src="Images/logo.png" alt="">
                                 </a>
                             </div>
                         </div>

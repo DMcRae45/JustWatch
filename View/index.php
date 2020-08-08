@@ -17,7 +17,7 @@ include 'include_header.php';
             <div class="container">
                 <div class="row align-items-center justify-content-start">
                     <div class="col-lg-10 col-md-10">
-                      <img src="Images/temporary_logo.png" alt="BurnerMovies">
+                      <img src="Images/logo.png" alt="BurnerMovies">
                         <div class="slider_text">
                             <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
                                This site is for personal use

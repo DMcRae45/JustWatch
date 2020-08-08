@@ -4,6 +4,7 @@
     Description: Burner Movies for free viewing.
     Author: David McRae, Oliver Dickens
 */
+//TODO: adjust colors for styling
 //TODO: movies are overlapping footer
 ?>
 <html>
@@ -39,10 +40,10 @@
                   echo '<div class="row">';
                 }
 
-                echo "<div class='col-md-4 mt-4'>"; // open col
+                echo "<div class='col-md-4 mt-4 '>"; // open col
                 echo "<div class='card secondaryColour border border-success'>"; // Open card div
                 echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."' class='card-img-top homePage' alt='Movie Poster' style='height: 30rem' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
-                echo "<div class='card-body'>";// open card body
+                echo "<div class='card-body '>";// open card body
                 echo "<h5 class='card-title'>".$movieArray[$i]->Title."</h5>"; // card title
                 echo "</div>";// close card body
                 echo "<ul class='list-group list-group-flush'>"; // start list inside the card

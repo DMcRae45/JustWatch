@@ -18,7 +18,7 @@
                         <div class="footer_logo wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                             <a href="index.php">
                               <div class = "showcase-top">
-                                <img src="Images/temporary_logo.png" alt="BurnerMovies">
+                                <img src="Images/logo.png" alt="BurnerMovies">
                               </div>
                             </a>
                         </div>
