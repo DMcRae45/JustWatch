@@ -11,9 +11,9 @@
   include '../Controller/session.php';
   include '../Controller/getAllMovies.php';
   include 'include_header.php';
+  include 'include_navbar.php';
   ?>
 <!-- </head> -->
-<title>Burner - All Movies</title>
 <body>
 <?php
   //Error Reporting for the users

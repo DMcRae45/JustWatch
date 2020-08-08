@@ -4,14 +4,15 @@
 
     Author: David McRae, Oliver Dickens
  */
- include '../Controller/session.php';
+
 ?>
 <html>
   <?php
+    include '../Controller/session.php';
     include 'include_header.php';
+    //include 'include_navbar.php';
+//TODO: fix this page casue if we include navbar the username div cuts off
   ?>
-<title>Burn - Login</title>
-
 <body>
 
 <div class="container margin-top:5%">
@@ -48,9 +49,9 @@
 
 </div>
 </div><!-- end of container-->
-<!-- <footer> -->
+<footer>
       <?php include 'include_footer.php'; ?>
-<!-- </footer> -->
+</footer> 
 
 <?php
 require '../Controller/bootstrapScript.php';

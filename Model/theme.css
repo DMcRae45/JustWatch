@@ -24,26 +24,6 @@
   background-color: #F7A416;
   color: black;
 }
-/* Button Styles  */
-.btn-outline-primary {
-  color: #86C232;
-  border-color: #86C232;
-}
-.btn-outline-primary:hover{
-  background-color: #86C232;
-  color: black;
-  border-color: #86C232;
-}
-
-.btn-outline-danger {
-  color: #E50914;
-  border-color: #E50914;
-}
-.btn-outline-danger:hover{
-  background-color: #E50914;
-  color: black;
-  border-color: #E50914;
-}
 
 
 html, body
@@ -98,14 +78,6 @@ img {
   left: 0;
   transform: translate(-50%, -50%);
 }
-/* this controls sign in button and position */
-.showcase-2{
-  top: 15%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  align-items: center;
-}
 /* this controls logo size and position */
 .showcase-top img{
 width: 250px;
@@ -123,35 +95,36 @@ transform: translate(-50%, -50%);
   text-align: center;
   margin-top: 9rem;
 }
-
-.form-control, .input-group-text, .custom-select, .list-group-item
-{
-  background-color: #2a2c33;
-  color: #ffffff;
+.showcaseUnderConstruction{
+  width:100%;
+  height: 100vh;
+  postition: relative;
+  background: url('Images/underconstruction.jpg')no-repeat center center/cover;
 }
-
-/**********************************Footer */
-footer
-{
-  bottom: 0px;
+.showcaseUnderConstruction-top{
+  position: relative;
+  height: 90px;
 }
-@viewport
-{
-  zoom: 1.0;
-  width: extend-to-zoom;
+.showcaseUnderConstruction-top a{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
-
-@-ms-viewport
-{
-  width: extend-to-zoom;
-  zoom: 1.0;
+/* this controls logo size and position */
+.showcaseUnderConstruction-top img{
+width: 250px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
-  }
+.showcaseUnderConstruction-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
 }

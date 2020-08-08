@@ -8,21 +8,32 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/fire.png">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>BurnerMovies</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/temporary_logo.png">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
 
-    <!-- bootstrap Css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!-- Custom Css -->
-    <style>
-    <?php include '../Model/Theme.css'; ?>
-    </style>
+  <!-- Custom Css -->
+  <style>
+  <?php include '../Model/css/bootstrap.min.css'; ?>
+  <?php include '../Model/css/owl.carousel.min.css'; ?>
+  <?php include '../Model/css/magnific-popup.css'; ?>
+  <?php include '../Model/css/font-awesome.min.css'; ?>
+  <?php include '../Model/css/themify-icons.css'; ?>
+  <?php include '../Model/css/nice-select.css'; ?>
+  <?php include '../Model/css/flaticon.css'; ?>
+  <?php include '../Model/css/gijgo.css'; ?>
+  <?php include '../Model/css/animate.min.css'; ?>
+  <?php include '../Model/css/slick.css'; ?>
+  <?php include '../Model/css/slicknav.css'; ?>
+  <?php include '../Model/css/style.css'; ?>
+  <?php include '../Model/Theme.css'; ?>
+  </style>
 
-    <?php
-        include 'include_navbar.php';
-    ?>
+
+
 </head>

@@ -4,6 +4,7 @@
 
     Author: David McRae
 */
+//TODO: include access denied when inserting a movie while not logged in, remove an atler have this already
 include '../Controller/session.php';
 
 if(isset($_SESSION['username']))

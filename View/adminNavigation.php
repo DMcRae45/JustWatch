@@ -6,12 +6,9 @@
 */
 include '../Controller/session.php';
 include 'include_header.php';
-
+include 'include_navbar.php';
 ?>
 <html>
-<head>
-<title>Burn - Admin</title>
-</head>
 
 <body>
 

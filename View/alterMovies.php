@@ -17,7 +17,7 @@ if(isset($_GET['error']))
 if(!isset($_SESSION['username']))
 {
   // Customer has tried to access this page
-  header("Location: index.php?error=oops");
+  header("Location: index.php?error=ACCESS DENIED");
 }
 else
 {
