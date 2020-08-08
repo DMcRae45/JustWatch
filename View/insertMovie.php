@@ -1,3 +1,21 @@
+
+<?php
+/*
+    Description: Employee navigation to maintain the Cinema booking system
+
+    Author: David McRae
+*/
+include '../Controller/session.php';
+include 'include_header.php';
+include 'include_navbar.php';
+//TODO: remove movie is not set up yet
+?>
+<html>
+
+<body>
+    <header class="showcase" style='margin-top:15%'>
+
+
 <?php
 /*
     Description: form used to insert ne movies into the database.
@@ -5,7 +23,7 @@
     Author: David McRae
 */
 //TODO: include access denied when inserting a movie while not logged in, remove an atler have this already
-include '../Controller/session.php';
+
 
 if(isset($_SESSION['username']))
 {
@@ -82,7 +100,6 @@ if(isset($_SESSION['username']))
           </div>
       </div>
       ";
-      include 'include_footer.php';
 
       include '../Controller/bootstrapScript.php';
       include '../Controller/ValidateEmptyFields.js';
@@ -96,3 +113,12 @@ else
   header("Location: ../View/index.php");
 }
 ?>
+
+</header>
+</body>
+
+<?php
+include 'include_footer.php';
+include '../Controller/bootstrapScript.php';
+?>
+</html>

@@ -1,5 +1,21 @@
 <?php
+/*
+    Description: Employee navigation to maintain the Cinema booking system
+
+    Author: David McRae
+*/
 include '../Controller/session.php';
+include 'include_header.php';
+include 'include_navbar.php';
+//TODO: remove movie is not set up yet
+?>
+<html>
+
+<body>
+    <header class="showcase" style='margin-top:15%'>
+
+<?php
+
 if(isset($_SESSION['username']))
 {
   include '../Controller/getAllMovies.php';
@@ -7,14 +23,10 @@ if(isset($_SESSION['username']))
 
 echo "
 <html>
-<head>
-<title>Burn - Remove Movies</title>
-</head>
-
 <body>
   <div class='container primaryDark'>
     <div class='page-header'>
-        <h1>Remove a Movie</h1>
+          <h1 class='primaryDark'>Remove A Movie</h1>
     </div>
     <div class='container'>
   ";
@@ -60,9 +72,7 @@ echo "
     </div>
   </div>
   ";
-// <footer>
-  include 'include_footer.php';
-// </footer>
+
 // <Script>
   include '../Controller/bootstrapScript.php';
 // </Script>
@@ -80,3 +90,12 @@ else
   header("Location: index.php?error=ACCESS DENIED");
 }
 ?>
+
+</header>
+</body>
+
+<?php
+include 'include_footer.php';
+include '../Controller/bootstrapScript.php';
+?>
+</html>

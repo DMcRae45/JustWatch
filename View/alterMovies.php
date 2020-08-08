@@ -1,11 +1,19 @@
 <?php
-
 /*
-    Description: User interface used to manage and alter movies listed on the site.
+    Description: Employee navigation to maintain the Cinema booking system
 
     Author: David McRae
 */
 include '../Controller/session.php';
+include 'include_header.php';
+include 'include_navbar.php';
+//TODO: remove movie is not set up yet
+?>
+<html>
+
+<body>
+    <header class="showcase" style='margin-top:15%'>
+<?php
 
 //Error Reporting for the users
 if(isset($_GET['error']))
@@ -25,12 +33,13 @@ else
 
 echo "
 <html>
-  <title>Burn - Alter Movies</title>
+
 <body>
 <br>
 <div class='container primaryDark' >
   <div class='page-header'>
-    <h3>Alter Movie Records</h3>
+  <h1 class='primaryDark'>Alter Movie Records</h1>
+  
   </div>";
 
 if (isset($_GET['id']))
@@ -127,15 +136,21 @@ else
     echo "</table>";
 }
 echo "</div></div>";
-// <footer>
-  include 'include_footer.php';
-// </footer>
 // <Script>
   include '../Controller/bootstrapScript.php';
-// </Script>
+
 echo "
 </body>
 </html>
 ";
 }
 ?>
+
+</header>
+</body>
+
+<?php
+include 'include_footer.php';
+include '../Controller/bootstrapScript.php';
+?>
+</html>

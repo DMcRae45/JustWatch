@@ -9,18 +9,13 @@
 */
 include '../Controller/session.php';
 include 'include_header.php';
+include 'include_navbar.php';
 //this page is not in use
 ?>
 <html>
 <body id ="testPage">
-    <header class="showcaseUnderConstruction">
+    <header class="showcaseUnderConstruction" style='margin-top:15%'>
 
-    <div class = "showcaseUnderConstruction-top">
-      <img src="Images/temporary_logo.png" alt="BurnerMovies">
-    </div>
-    <div class = "showcaseUnderConstruction">
-        <a class='btn primaryColour' href='testNewIndex.php'>Sign In</a>
-    </div>
   </header>
 
     <!-- </footer> -->

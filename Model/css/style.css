@@ -961,7 +961,7 @@ h3 {
 
 /* line 57, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
-  color: #fff;
+  color: #86C232;
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 600;
@@ -1012,7 +1012,7 @@ h3 {
 
 /* line 90, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #86C232;
+  color: #61892F;
 }
 
 /* line 94, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
@@ -1048,7 +1048,7 @@ h3 {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: block;
-  color: #fff;
+  color: #86C232;
 }
 
 /* line 115, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
@@ -1058,7 +1058,7 @@ h3 {
 
 /* line 119, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li:hover a {
-  color: #86C232;
+  color: #61892F;
 }
 
 /* line 124, ../../Arafath/CL/December/233. Startup/HTML/scss/_header.scss */
