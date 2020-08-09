@@ -19,6 +19,11 @@
 <body>
   <header class="showcase"style='margin-top:5%'>
     <?php
+    //TODO: change the amount of cards in row and coloums:
+    //thinking 8 in a row and 3 coloums
+    //TODO: Change size of cards to fit 
+    ?>
+    <?php
       //Error Reporting for the users
         if(isset($_GET['error']))
           {
@@ -70,13 +75,25 @@
               }
               echo '</div></div><br>';
               ?>
-
+              <?php
+              //TODO: wire up a page nav for easy switching
+              ?>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
       </header>
+
+        <footer>
+          <?php
+          include 'include_footer.php';
+          include '../Controller/bootstrapScript.php';
+          ?>
+        </footer>
     </body>
-   <footer>
-      <?php
-        include 'include_footer.php';
-        include '../Controller/bootstrapScript.php';
-      ?>
-  </footer>
 </html>

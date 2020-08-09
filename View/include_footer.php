@@ -5,7 +5,7 @@
  */
  include 'include_header.php';
  //TODO: footer logo is 100% and massive, needs resized and positioned bottom
- //TODO: when recently added movies or a home screen is made change href in footer 
+ //TODO: when recently added movies or a home screen is made change href in footer
 ?>
 
 <html>

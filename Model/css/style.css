@@ -1981,8 +1981,8 @@ h3 {
 
 /* line 6, ../../Arafath/CL/December/233. Startup/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 100px;
-  padding-bottom: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: #1F1F1F;
 }
 
@@ -2005,8 +2005,8 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 6, ../../Arafath/CL/December/233. Startup/HTML/scss/_footer.scss */
   .footer .footer_top {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 

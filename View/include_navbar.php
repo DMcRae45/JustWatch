@@ -16,7 +16,7 @@ include 'include_header.php';
 
     <!-- header-start -->
     <header>
-        <div class="header-area">
+        <div class="header-area secondaryDark">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
