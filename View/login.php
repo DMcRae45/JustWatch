@@ -4,14 +4,11 @@
       Author: David McRae, Oliver Dickens
    */
     include '../Controller/session.php';
-    include 'include_header.php';
+    include 'header.php';
     //include 'include_navbar.php';
     //TODO: fix this page casue if we include navbar the username div cuts off
 ?>
-<html>
   <body>
-      <header class="showcase" style='margin-top:15%'>
-        <div class="container">
           <div class="container">
             <h1 class='primaryDark'>Sign In</h1>
     <?php
@@ -48,6 +45,6 @@ require '../Controller/ValidateEmptyFields.js';
 ?>
 </body>
 <footer>
-      <?php include 'include_footer.php'; ?>
+      <?php include 'footer.php'; ?>
 </footer>
 </html>

@@ -6,24 +6,22 @@
  */
 try
 {
-    // RPi Credentials
-    // $host ='localhost';
-    // $dbname = 'Burner';
-    // $un = 'Pi';
-    // $pw = '#R_pi';
+  // RPi Credentials
+  // $host ='localhost';
+  // $dbname = 'Burner';
+  // $un = 'Pi';
+  // $pw = '#R_pi';
 
-    // for use if you copy database to be on localhost
-    $host ='localhost';
-    $dbname = 'Burner';
-    $un = 'root';
-    $pw = '';
+  // for use if you copy database to be on localhost
+  $host ='localhost';
+  $dbname = 'Burner';
+  $un = 'root';
+  $pw = '';
 
-    $connection = new PDO ("mysql:host=$host;dbname=$dbname;charset=UTF8",$un,$pw);
-    //echo "Connection Successful";
-
+  $connection = new PDO ("mysql:host=$host;dbname=$dbname;charset=UTF8",$un,$pw);
 }
 catch (PDOException $ex)
 {
-    Die("Connection Failed");
+  Die("Connection Failed");
 }
 ?>

@@ -1,14 +1,15 @@
+<!DOCTYPE html>
+<html>
 <?php
 /*
     Description: this is the video player for movies and tv shows
 */
   Include '../Controller/session.php';
-  Include 'include_header.php';
-  Include 'include_navbar.php';
+  Include 'header.php';
+  Include 'navbar.php';
   Include '../Controller/getMovieByID.php';
 ?>
 <body>
-  <header class="showcase">
     <?php
     echo "
       <div class='main' id='main' style='margin-left:25%; margin-top:15%' >
@@ -19,11 +20,10 @@
       </div>
     ";
     ?>
-  </header>
 
 <!-- </footer> -->
   <?php
-  include 'include_footer.php';
+  include 'footer.php';
   include '../Controller/bootstrapScript.php';
   ?>
 </body>

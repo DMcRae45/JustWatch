@@ -5,8 +5,8 @@
     Author: David McRae
 */
 include '../Controller/session.php';
-include 'include_header.php';
-include 'include_navbar.php';
+include 'header.php';
+include 'navbar.php';
 //TODO: remove movie is not set up yet
 ?>
 <html>
@@ -29,7 +29,6 @@ if(!isset($_SESSION['username']))
 }
 else
 {
-  include 'include_header.php';
 
 echo "
 <html>
@@ -39,7 +38,7 @@ echo "
 <div class='container primaryDark' >
   <div class='page-header'>
   <h1 class='primaryDark'>Alter Movie Records</h1>
-  
+
   </div>";
 
 if (isset($_GET['id']))
@@ -150,7 +149,7 @@ echo "
 </body>
 
 <?php
-include 'include_footer.php';
+include 'footer.php';
 include '../Controller/bootstrapScript.php';
 ?>
 </html>

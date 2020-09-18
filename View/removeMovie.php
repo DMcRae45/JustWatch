@@ -5,8 +5,8 @@
     Author: David McRae
 */
 include '../Controller/session.php';
-include 'include_header.php';
-include 'include_navbar.php';
+include 'header.php';
+include 'navbar.php';
 //TODO: remove movie is not set up yet
 ?>
 <html>
@@ -19,7 +19,6 @@ include 'include_navbar.php';
 if(isset($_SESSION['username']))
 {
   include '../Controller/getAllMovies.php';
-  include 'include_header.php';
 
 echo "
 <html>
@@ -95,7 +94,7 @@ else
 </body>
 
 <?php
-include 'include_footer.php';
+include 'footer.php';
 include '../Controller/bootstrapScript.php';
 ?>
 </html>

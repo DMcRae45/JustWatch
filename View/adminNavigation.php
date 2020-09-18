@@ -5,14 +5,13 @@
     Author: David McRae
 */
 include '../Controller/session.php';
-include 'include_header.php';
-include 'include_navbar.php';
+include 'header.php';
+include 'navbar.php';
 //TODO: remove movie is not set up yet
 ?>
 <html>
 
 <body>
-    <header class="showcase" style='margin-top:15%'>
       <div class='page-header text-center mt-4'>
         <h1 class='primaryDark'>Admin Screen</h1>
       </div>
@@ -31,11 +30,10 @@ include 'include_navbar.php';
           </div>
         </div>
       </div>
-    </header>
 </body>
 
 <?php
-include 'include_footer.php';
+include 'footer.php';
 include '../Controller/bootstrapScript.php';
 ?>
 </html>
