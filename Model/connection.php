@@ -7,10 +7,10 @@
 try
 {
   // RPi Credentials
-  // $host ='localhost';
-  // $dbname = 'Burner';
-  // $un = 'Pi';
-  // $pw = '#R_pi';
+  //$host ='localhost';
+  //$dbname = 'MovieDB';
+  //$un = 'Pi';
+  //$pw = '#R_pi';
 
   // for use if you copy database to be on localhost
   $host ='localhost';
