@@ -10,6 +10,7 @@
   Include '../Controller/getMovieByID.php';
 ?>
 <body>
+  <div>
     <?php
     echo "
       <div class='main' id='main' style='margin-left:25%; margin-top:15%' >
@@ -20,11 +21,12 @@
       </div>
     ";
     ?>
-
-<!-- </footer> -->
-  <?php
-  include 'footer.php';
-  include '../Controller/bootstrapScript.php';
-  ?>
+</div>
 </body>
+<footer>
+      <?php
+        include 'footer.php';
+        include '../Controller/bootstrapScript.php';
+        ?>
+</footer>
 </html>

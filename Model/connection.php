@@ -14,7 +14,7 @@ try
 
   // for use if you copy database to be on localhost
   $host ='localhost';
-  $dbname = 'Burner';
+  $dbname = 'MovieDB';
   $un = 'root';
   $pw = '';
 

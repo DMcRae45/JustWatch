@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 /*
-    Description: Burner Movies for free viewing.
+    Description: JustWatch Movies for free viewing.
     Author: David McRae, Oliver Dickens
 */
 //TODO: adjust colors for styling
@@ -19,7 +19,7 @@
 <body>
     <?php
     //TODO: change the amount of cards in row and coloums:
-    //thinking 8 in a row and 3 coloums
+    //thinking 8 in a row 
     //TODO: Change size of cards to fit
     ?>
     <?php
