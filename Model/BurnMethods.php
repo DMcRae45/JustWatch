@@ -89,7 +89,7 @@ function CreateUser()
     $query = $conncetion->prepare
     ("
 
-    INSERT INTO burn_user (Name, Username, Password)
+    INSERT INTO User (Name, Username, Password)
     VALUES( :Name, :username, :password)
 
     ");
@@ -124,7 +124,7 @@ function AttemptLogin()
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-    $sql = "SELECT * FROM burn_user WHERE Username = :username";
+    $sql = "SELECT * FROM User WHERE Username = :username";
 
     $stmt = $connection->prepare($sql);
     $success = $stmt->execute(['username' => $username]);
@@ -169,7 +169,7 @@ function GetAllMovies()
 {
     require_once 'connection.php';
 
-    $sql = "SELECT * FROM burn_movie";
+    $sql = "SELECT * FROM Movie";
 
     $stmt = $connection->prepare($sql);
     $result = $stmt->fetch();
@@ -256,7 +256,7 @@ function AttemptInsertMovie()
                     $query = $connection->prepare
                     ("
 
-                    INSERT INTO burn_movie (Title, Video_link, Image_link, Description, Genre, Year)
+                    INSERT INTO Movie (Title, Video_link, Image_link, Description, Genre, Year)
                     VALUES (:title, :video, :image, :description, :genre, :year)
 
                     ");
@@ -400,7 +400,7 @@ function AttemptUpdateMovie()
               $query = $connection->prepare
               ("
 
-              UPDATE burn_movie SET
+              UPDATE Movie SET
               Title = :title,
               Video_link = :video,
               Image_link = :image,
@@ -461,7 +461,7 @@ function RemoveMovieByID($movieid)
 
   $stmt = $connection->prepare
   (
-    "DELETE FROM burn_movie WHERE Movie_ID = :movieid"
+    "DELETE FROM Movie WHERE Movie_ID = :movieid"
   );
 
   $success = $stmt->execute
@@ -486,7 +486,7 @@ function getMovieByID($movieid)
 
   $query = $connection->prepare
   ("
-    SELECT * FROM burn_movie WHERE Movie_ID = :movieid LIMIT 1
+    SELECT * FROM Movie WHERE Movie_ID = :movieid LIMIT 1
   ");
 
   $success = $query->execute

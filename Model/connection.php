@@ -7,16 +7,16 @@
 try
 {
   // RPi Credentials
-  // $host ='localhost';
-  // $dbname = 'Burner';
-  // $un = 'Pi';
-  // $pw = '#R_pi';
+  $host ='localhost';
+  $dbname = 'MovieDB';
+  $un = 'Pi';
+  $pw = '#R_pi';
 
   // for use if you copy database to be on localhost
-  $host ='localhost';
-  $dbname = 'Burner';
-  $un = 'root';
-  $pw = '';
+  //$host ='localhost';
+  //$dbname = 'Burner';
+  //$un = 'root';
+  //$pw = '';
 
   $connection = new PDO ("mysql:host=$host;dbname=$dbname;charset=UTF8",$un,$pw);
 }
