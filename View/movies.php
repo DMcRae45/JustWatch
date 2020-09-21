@@ -13,7 +13,7 @@
   include '../Controller/session.php';
   include '../Controller/getAllMovies.php';
   include 'header.php';
-  //include 'navbar.php';
+  include 'navbar.php';
   ?>
 <!-- </head> -->
 <body>
