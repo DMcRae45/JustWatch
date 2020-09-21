@@ -11,9 +11,9 @@ include 'View/header.php';
 
 <body>
 
-<div class="container text-center jumbotron customDark">
+<div class="container text-center jumbotron customDark mt-5">
 
-<img src="View/Images/logo.png" alt="BurnerMovies">
+<img src="View/Images/JustWatch.png" alt="JustWatch">
 
   <h3>
     This Site is restricted to personal use due to sopyright laws on sharing content.

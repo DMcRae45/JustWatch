@@ -13,9 +13,6 @@ include 'navbar.php';
 <html>
 
 <body>
-    <header class="showcase" style='margin-top:15%'>
-
-
 <?php
 /*
     Description: form used to insert ne movies into the database.
@@ -23,7 +20,6 @@ include 'navbar.php';
     Author: David McRae
 */
 //TODO: include access denied when inserting a movie while not logged in, remove an atler have this already
-
 
 if(isset($_SESSION['username']))
 {
@@ -35,10 +31,6 @@ if(isset($_SESSION['username']))
   }
 
       echo "
-      <html>
-      <head>
-
-      </head>
 
       <body>
         <div class='container primaryDark'>
@@ -108,7 +100,7 @@ if(isset($_SESSION['username']))
 }
 else
 {
-  header("Location: ../View/index.php");
+  header("Location: ../index.php");
 }
 ?>
 

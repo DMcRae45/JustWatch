@@ -218,10 +218,8 @@ function AttemptInsertMovie()
                 // Checks file size is below stated value
                 if ($fileSize < 2000000)
                 {
-                    // Gives file a unique id to stop overwriting of files with same name
-                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                     // Determines file location
-                    $fileDestination = '../View/images/' . $fileNameNew;
+                    $fileDestination = 'Images/' . $fileName;
                     // Sends file to specified location
                     move_uploaded_file($fileTmpName, $fileDestination);
 
