@@ -11,7 +11,7 @@ if(!isset($movieid))
 }
 else
 {
-  Include '../Model/BurnMethods.php';
+  Include '../Model/JustWatchMethods.php';
 
   $movie = getMovieByID($movieid);
   $movieArray = json_decode($movie);

@@ -9,7 +9,7 @@ $movieid = $_GET['id'];
 if(isset($movieid) && $_SESSION['username'])
 {
 
-  include '../Model/BurnMethods.php';
+  include '../Model/JustWatchMethods.php';
   RemoveMovieByID($movieid);
 }
 else

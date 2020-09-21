@@ -6,7 +6,7 @@
  */
 
 
-Include '../Model/BurnMethods.php';
+Include '../Model/JustWatchMethods.php';
 
 $movies = GetAllMovies();
 $movieArray = json_decode($movies);
