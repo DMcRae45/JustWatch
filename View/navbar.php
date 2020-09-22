@@ -32,7 +32,7 @@ include 'header.php';
   </li>
 
   <li class="nav-item">
-    <a href="#" class="nav-link">
+    <a href="newReleases.php" class="nav-link">
       <div class="fa-secondary fa-lg">
         <i class="fas fa-star fa-lg"></i>
       </div>

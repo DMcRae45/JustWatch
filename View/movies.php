@@ -16,6 +16,7 @@
   ?>
 <!-- </head> -->
 <body>
+  <main>
     <?php
     //TODO: change the amount of cards in row and coloums:
     //thinking 8 in a row as 3 is too small as our DB expands
@@ -83,5 +84,6 @@
           include 'footer.php';
           include '../Controller/bootstrapScript.php';
           ?>
+        </main>
     </body>
 </html>
