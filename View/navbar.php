@@ -5,8 +5,6 @@ Author: David McRae, Oliver Dickens
 */
 include 'header.php';
 ?>
-
-<script defer src="theme.js"></script>
 <nav class="navbar">
   <ul class="navbar-nav">
     <li class="logo">
@@ -30,7 +28,6 @@ include 'header.php';
       </svg>
     </a>
   </li>
-
   <li class="nav-item">
     <a href="newReleases.php" class="nav-link">
       <div class="fa-secondary fa-lg">
@@ -79,6 +76,5 @@ include 'header.php';
       <span class="link-text">Logout</span>
     </a>
   </li>
-
 </ul>
 </nav>

@@ -19,6 +19,6 @@
 
   <!-- Custom Css -->
   <style>
-  <?php include '../Model/Theme.css'; ?>
+  <?php include '../Model/theme.css'; ?>
   </style>
 </head>

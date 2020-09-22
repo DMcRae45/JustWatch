@@ -59,15 +59,12 @@ main {
   color: var(--text-primary);
 }
 
-
-
-
-
 .navbar {
   position: fixed;
   background-color: var(--bg-secondary);
   transition: width 600ms ease;
   overflow: scroll;
+  z-index:1;
 }
 .navbar::-webkit-scrollbar {
   display: none;
