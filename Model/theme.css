@@ -43,9 +43,16 @@ main {
   margin-left: 5rem;
   padding: 1rem;
 }
+
 .col{
   display: flex;
   flex-direction: row;
+}
+.col{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .card
 {
@@ -188,7 +195,12 @@ main {
     width: 100vw;
     height: 5rem;
   }
-
+  .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .logo {
     display: none;
   }

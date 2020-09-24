@@ -10,7 +10,7 @@ include 'View/header.php';
 ?>
 
 <body>
-  <div class="container text-center jumbotron customDark mt-5">
+  <div class="container text-center jumbotron mt-5">
     <h1>JustWatch</h1><hr>
     <h3>
       This Site is restricted to personal use <u>only</u>.<p>
