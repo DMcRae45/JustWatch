@@ -10,18 +10,16 @@
   Include '../Controller/getMovieByID.php';
 ?>
 <body>
-  <div>
+  <main>
+      <div class="playMovie">
     <?php
-    echo "
-      <div class='main' id='main' style='margin-left:25%; margin-top:15%' >
-          <div alt='Max-width 100% '>
-            <h1 class='primaryDark'>".$movieArray->Title."</h1>
-            <video width='1000' height='500' src='".$movieArray->Video_link."' autoplay controls/>
-          </div>
-      </div>
-    ";
+
+      echo "<h1 class='movieTitle'>".$movieArray->Title."</h1>";
+      echo "<div class='videoPlayer' id='videoPlayer'>
+      <video width='1000' height='500' src='".$movieArray->Video_link."' autoplay controls/></div>";
     ?>
-</div>
+    </div
+</main>
 </body>
 <footer>
       <?php

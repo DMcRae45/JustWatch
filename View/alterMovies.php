@@ -1,18 +1,14 @@
 <?php
-/*
-    Description: Employee navigation to maintain the Cinema booking system
 
-    Author: David McRae
-*/
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-//TODO: remove movie is not set up yet
+
 ?>
 <html>
 
 <body>
-    <header class="showcase" style='margin-top:15%'>
+    <main>
 <?php
 
 //Error Reporting for the users
@@ -129,7 +125,7 @@ else
       echo "<tr>";
         echo "<td>".$movieArray[$i]->Movie_ID."</td>";
         echo "<td class='text-left'>".$movieArray[$i]->Title."</td>";
-        echo "<td><a class='btn btn-warning' href='?id=".$movieArray[$i]->Movie_ID."'>Alter</a></td>";
+        echo "<td><a class='btn btn-success' href='?id=".$movieArray[$i]->Movie_ID."'>Alter</a></td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -145,7 +141,7 @@ echo "
 }
 ?>
 
-</header>
+</main>
 </body>
 
 <?php

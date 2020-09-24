@@ -1,18 +1,13 @@
 <?php
-/*
-    Description: Employee navigation to maintain the Cinema booking system
 
-    Author: David McRae
-*/
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-//TODO: remove movie is not set up yet
 ?>
 <html>
 
 <body>
-    <header class="showcase" style='margin-top:15%'>
+    <main>
 
 <?php
 
@@ -90,7 +85,7 @@ else
 }
 ?>
 
-</header>
+</main>
 </body>
 
 <?php

@@ -13,11 +13,15 @@ and sets my colour sheme*/
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
+  --transitionCard-speed: 400ms;
+}
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
 }
 
-body, .form-control, .input-group-text, .custom-select, .list-group-item
+body .form-control .input-group-text .custom-select
 {
-  color: #ececec;
   background-color: #23232e;
   margin: 0;
   padding: 0;
@@ -39,26 +43,47 @@ main {
   margin-left: 5rem;
   padding: 1rem;
 }
-
-.customDark
-{
-  background-color: var(--bg-secondary);
-  color:var(--text-primary);
+.col{
+  display: flex;
+  flex-direction: row;
 }
 .card
 {
-  width:100%;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  position: relative;
+  width: 250px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: 4px solid #141418;
 }
+.card .poster img{
+  width: 100%;
+  height: 450px;
 
-.card-body, .card-title, .card-text, .card-header,.list-group-item
+}
+.card-content
 {
+  top:20rem;
+  left:0;
+  width:100%;
+  height:100%;
+  position: absolute;
+  box-sizing: border-box;
+  cursor: pointer;
   text-align: center;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  border-radius: 2px;
+}
+.playMovie{
+  margin-top: 10%;
+  text-align: center;
 }
 
+.videoPlayer{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
 .navbar {
   position: fixed;
   background-color: var(--bg-secondary);
@@ -94,6 +119,7 @@ main {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-primary);
   color: var(--text-secondary);
+
 }
 
 .link-text {
@@ -102,6 +128,7 @@ main {
 }
 .nav-item{
   width:100%;
+  margin-left: 5rem;
   margin: 1 1.5rem;
 }
 .nav-link svg {
@@ -119,7 +146,7 @@ main {
 }
 
 
-.fa-primary,
+.fa-primary
 .fa-secondary {
   transition: var(--transition-speed);
 }
@@ -170,8 +197,9 @@ main {
     flex-direction: row;
   }
   .nav-item{
-    width:100%;
+    width:0px;
   }
+
   .nav-link {
     justify-content: center;
   }
