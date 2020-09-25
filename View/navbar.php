@@ -3,7 +3,6 @@
 Description: Navigation bar at the top of each page.
 Author: David McRae, Oliver Dickens
 */
-include 'header.php';
 ?>
 <nav class="navbar">
   <ul class="navbar-nav">
