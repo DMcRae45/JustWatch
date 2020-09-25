@@ -221,7 +221,6 @@ function AttemptInsertMovie()
                     // Determines file location
                     $fileDestination = 'Images/' . $fileName;
                     // Sends file to specified location
-                    move_uploaded_file($fileTmpName, $fileDestination);
 
                     // Once complete carry out the INSERT statement to database
                     $title = (filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING));
@@ -230,7 +229,6 @@ function AttemptInsertMovie()
                     $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
                     $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
                     $year = (filter_input(INPUT_POST, 'year',FILTER_SANITIZE_STRING ));
-
 
                     $Error = false;
                     $videoError;
