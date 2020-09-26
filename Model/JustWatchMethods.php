@@ -6,6 +6,7 @@
 */
 
 //Create User
+//Series=lines 500+
 function CreateUser()
 {
   Require 'connection.php';
@@ -498,5 +499,58 @@ function getMovieByID($movieid)
   else
   {
     echo "Unable to find Movie";
+  }
+}
+
+
+//Below david is my work 26/09/20
+//starting to lay the foundations of adding series to our database
+
+
+//Read All series
+function GetAllSeries()
+{
+    require_once 'connection.php';
+
+    $sql = "SELECT * FROM series";
+
+    $stmt = $connection->prepare($sql);
+    $result = $stmt->fetch();
+    $success = $stmt->execute();
+
+    if($success && $stmt->rowCount() > 0)
+    {
+      //  convert to JSON
+      $rows = array();
+      while($r = $stmt->fetch())
+      {
+        $rows[] = $r;
+      }
+      return json_encode($rows);
+    }
+}
+//Read Series by ID index
+function getSeriesByID($seriesid)
+{
+  require 'connection.php';
+
+  $query = $connection->prepare
+  ("
+    SELECT * FROM series WHERE series_ID = :seriesid LIMIT 1
+  ");
+
+  $success = $query->execute
+  ([
+    'seriesid' => $seriesid
+  ]);
+
+  if($success && $query->rowCount() > 0)
+  {
+    $row = $query->fetch();
+    return json_encode($row);
+  }
+  else
+  {
+    echo "Unable to find Series";
   }
 }
