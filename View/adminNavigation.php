@@ -8,8 +8,9 @@ include 'header.php';
 include 'navbar.php';
 ?>
 <body>
-  <div class='page-header text-center'>
-    <h1>Admin Screen</h1>
+  <main>
+  <div class="container text-center">
+    <h1>Admin Screen</h1><hr>
     <div class='container mt-5 mb-5'>
       <div class='row'>
         <div class='col-md-6 mt-5'>
@@ -26,6 +27,7 @@ include 'navbar.php';
       </div>
     </div>
   </div>
+</main>
 </body>
 
 <?php

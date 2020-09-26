@@ -44,7 +44,7 @@ Author: David McRae, Oliver Dickens
       <a href="#" class="nav-link">
         <div class="fa-secondary fa-lg">
           <i class="fas fa-bookmark fa-lg"></i>
-          <span class="link-text">My-List</span>
+          <span class="link-text">Bookmarked</span>
         </div>
       </a>
     </li>

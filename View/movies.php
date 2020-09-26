@@ -18,7 +18,6 @@
 <body>
   <main>
     <?php
-    //TODO: wire up a page counter for easy switching
     //TODO: Sort by year(first showing current year when pressed then reverses to oldest when pressed again) and genre options?
 
     ?>
@@ -48,9 +47,9 @@
                 echo "<div class='col'>"; // open col
                 echo "<div class='card'>"; // Open card div
                 echo "<div class='poster' >"; // Open card poster
-                echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='Poster' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
+                echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
                 echo "</div>";// close poster
-                //TODO: Expansion: add Bookmark button to add to watch
+                //TODO: Expansion: add Bookmarked button to add to watch list
                 echo "</div>";// close card
                 echo "</div>";// close col
 
