@@ -12,7 +12,7 @@
   include '../Controller/session.php';
   include '../Controller/getAllMovies.php';
   include 'header.php';
-  include 'navbar.php';
+  include 'tempNav.php';
   ?>
 <!-- </head> -->
 <body>
@@ -78,6 +78,8 @@
           <?php
           include 'footer.php';
           include '../Controller/bootstrapScript.php';
+          include '../Controller/ajaxScript.php';
+          include '../Controller/navControl.js';
           ?>
         </main>
     </body>

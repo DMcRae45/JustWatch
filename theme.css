@@ -5,8 +5,7 @@
 
 /* these are my css variables
 and sets my colour sheme*/
-:root
-{
+:root {
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
@@ -16,11 +15,9 @@ and sets my colour sheme*/
   --transition-speed: 600ms;
   --transitionCard-speed: 400ms;
 }
-
-body
-{
-  background-color: var(--bg-primary);
-  color: var(--text-secondary);
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
 }
 
 body .form-control .input-group-text .custom-select
@@ -30,35 +27,33 @@ body .form-control .input-group-text .custom-select
   padding: 0;
 }
 
-body::-webkit-scrollbar
-{
+body::-webkit-scrollbar {
   width: 1rem;
 }
 
-body::-webkit-scrollbar-track
-{
+body::-webkit-scrollbar-track {
   background: #1e1e24;
 }
 
-body::-webkit-scrollbar-thumb
-{
+body::-webkit-scrollbar-thumb {
   background: #E50914;
 }
 
-main
-{
+main {
   margin-left: 5rem;
   padding: 1rem;
 }
 
-.col
-{
+.col{
+  display: flex;
+  flex-direction: row;
+}
+.col{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
 .card
 {
   position: relative;
@@ -67,13 +62,11 @@ main
   border-radius: 10px;
   border: 4px solid #141418;
 }
-
-.card .poster img
-{
+.card .poster img{
   width: 100%;
   height: 450px;
-}
 
+}
 .card-content
 {
   top:20rem;
@@ -86,15 +79,12 @@ main
   text-align: center;
   border-radius: 2px;
 }
-
-.playMovie
-{
+.playMovie{
   margin-top: 10%;
   text-align: center;
 }
 
-.videoPlayer
-{
+.videoPlayer{
   width:100%;
   display: flex;
   justify-content: center;
@@ -102,25 +92,29 @@ main
   margin-top: 1rem;
 }
 
-.navbar
-{
+.navbar {
+  position: fixed;
   background-color: var(--bg-secondary);
+  transition: width 600ms ease;
+  overflow: scroll;
   z-index:100;
   padding: 0;
 }
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 
-.list-group
-{
+.navbar-nav {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
 
-.list-group-item
-{
+.nav-link {
   display: flex;
   align-items: center;
   height: 5rem;
@@ -130,32 +124,17 @@ main
   transition: var(--transition-speed);
 }
 
-.list-group-item:hover {
+.nav-link:hover {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-primary);
   color: var(--text-secondary);
+
 }
 
-.link-text
-{
+.link-text {
+  display: none;
   margin-left: 1rem;
 }
-
-.list-group-item
-{
-  width:100%;
-  margin-left: 5rem;
-  margin: 1 1.5rem;
-  padding: 20;
-}
-
-.list-group-item i
-{
-  width: 100%;
-  min-width: 3rem;
-  margin: 0 1.5rem;
-}
-
 .nav-item
 {
   width:100%;
@@ -164,40 +143,38 @@ main
   padding: 20;
 }
 
-.nav-link i
-{
+.nav-link svg {
   width: 100%;
   min-width: 3rem;
   margin: 0 1.5rem;
-  display: inline;
 }
 
-.fa-primary
-{
+.fa-primary {
   color: #F84F57;
 }
 
-.fa-rimary, .fa-secondary
-{
+.fa-secondary{
   color: #E50914;
+}
+
+
+.fa-secondary {
   transition: var(--transition-speed);
 }
 
-.logo
-{
+.logo {
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 1rem;
   text-align: center;
-  color: grey;
-  background: black;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
-  padding: 1rem;
 }
 
-.logo i
-{
+.logo svg {
   transform: rotate(0deg);
   transition: var(--transition-speed);
 }
@@ -205,23 +182,72 @@ main
 .logo-text
 {
   display: inline;
+  position: absolute;
+  left: -999px;
   transition: var(--transition-speed);
 }
 
-.navbar:hover .logo i {
+.navbar:hover .logo svg {
   transform: rotate(-180deg);
 }
 
-.sideBar
-{
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  display: none;
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    top: -1;
+    width: 100vw;
+    height: 5rem;
+  }
+  .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-item{
+    width:0px;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
 }
 
-.list-group-item
-{
-  border: none;
-  margin: 0;
+/* Large screens*/
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 7rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 18rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 13rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
 }

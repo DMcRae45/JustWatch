@@ -27,6 +27,7 @@ Author: David McRae, Oliver Dickens
       </svg>
     </a>
   </li>
+
   <li class="nav-item">
     <a href="newReleases.php" class="nav-link">
       <div class="fa-secondary fa-lg">
