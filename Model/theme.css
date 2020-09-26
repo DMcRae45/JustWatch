@@ -16,6 +16,9 @@ and sets my colour sheme*/
   --transition-speed: 600ms;
   --transitionCard-speed: 400ms;
 }
+*{
+  margin: 0;
+}
 
 body
 {
@@ -26,8 +29,6 @@ body
 body .form-control .input-group-text .custom-select
 {
   background-color: #23232e;
-  margin: 0;
-  padding: 0;
 }
 
 body::-webkit-scrollbar
