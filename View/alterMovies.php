@@ -1,16 +1,7 @@
 <?php
-
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-
-?>
-<html>
-
-<body>
-    <main>
-<?php
-
 //Error Reporting for the users
 if(isset($_GET['error']))
 {
@@ -25,7 +16,6 @@ if(!isset($_SESSION['username']))
 }
 else
 {
-
 echo "
 <html>
 
@@ -34,9 +24,7 @@ echo "
 <div class='container primaryDark' >
   <div class='page-header'>
   <h1 class='primaryDark'>Alter Movie Records</h1>
-
   </div>";
-
 if (isset($_GET['id']))
 {
   $movieid = $_GET['id'];
@@ -51,7 +39,6 @@ if (isset($_GET['id']))
                 <input class='btn btn-dark inputfile' type='file' name='image_link' required/>
               </div>
             </div>";
-
             echo "<div class='col-md-8'>
                       <div class='input-group'>
                         <div class='input-group-prepend'>
@@ -60,15 +47,12 @@ if (isset($_GET['id']))
                   echo "<input class='form-control' type='text' name='video' placeholder='Please enter path to mp4 file' value='".$movieArray->Video_link."' required>
                       </div>
                     </div>";
-
           echo "<div class='form-group input-group' form-group-lg>
                   <div class='input-group-prepend'>
                     <span class='input-group-text' id='inputGroupPrepend'>Movie ID</span>
                   </div>
                   <input class='form-control' type='text' name='index' value='".$movieArray->Movie_ID."' readonly>
                 </div>";
-
-
           echo "<div class='form-group input-group' form-group-lg>
                   <div class='input-group-prepend'>
                     <span class='input-group-text' id='inputGroupPrepend'>Title</span>
@@ -77,7 +61,6 @@ if (isset($_GET['id']))
                 </div>
               </div>
             </div>";
-
           echo "<div class='form-group input-group'>
             <div class='input-group-prepend'>
               <span class='input-group-text' id='inputGroupPrepend'>Decription</span>
@@ -85,22 +68,18 @@ if (isset($_GET['id']))
               </br>
               <textarea class='form-control' type='text' name='description' placeholder='Description' rows='5' required>".$movieArray->Description."</textarea>
           </div>";
-
           echo "<div class='form-group input-group' form-group-lg>
             <div class='input-group-prepend'>
               <span class='input-group-text' id='inputGroupPrepend'>Genre</span>
             </div>
               <input class='form-control' type='text' name='genre' placeholder='Genre' value='".$movieArray->Genre."' required>
           </div>";
-
           echo "<div class='form-group input-group' form-group-lg>
             <div class='input-group-prepend'>
               <span class='input-group-text' id='inputGroupPrepend'>Year</span>
             </div>
               <input class='form-control' type='text' name='year' placeholder='2020' value='".$movieArray->Year."' required>
           </div>";
-
-
           echo "<button class='form-control' type='submit' name='updateMovieSubmit'>Update Movie</button>
       </div>
     </form>";
@@ -108,7 +87,6 @@ if (isset($_GET['id']))
 else
 {
   include '../Controller/getAllMovies.php';
-
   echo "
   <table class='table border border-dark text-center mt-4 primaryDark'>
     <thead class='thead-dark'>
@@ -118,7 +96,6 @@ else
           <th scope='col'>Alter Movie</th>
         </tr>
       </thead>";
-
       for ($i=0 ; $i < sizeof($movieArray) ; $i++)
       {
       //echo "<div class='border border-success'>";
@@ -131,21 +108,13 @@ else
     echo "</table>";
 }
 echo "</div></div>";
-// <Script>
-  include '../Controller/bootstrapScript.php';
-
+include 'footer.php';
+include '../Controller/bootstrapScript.php';
+include '../Controller/ajaxScript.php';
+include '../Controller/navControl.js';
 echo "
 </body>
 </html>
 ";
 }
 ?>
-
-</main>
-</body>
-
-<?php
-include 'footer.php';
-include '../Controller/bootstrapScript.php';
-?>
-</html>

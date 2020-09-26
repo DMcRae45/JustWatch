@@ -12,7 +12,7 @@
   include '../Controller/session.php';
   include '../Controller/getAllMovies.php';
   include 'header.php';
-  include 'tempNav.php';
+  include 'navbar.php';
   ?>
 <!-- </head> -->
 <body>
@@ -49,10 +49,6 @@
                 echo "<div class='card'>"; // Open card div
                 echo "<div class='poster' >"; // Open card poster
                 echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='Poster' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
-                echo "<div class='card-content '>";// open card content
-                echo "<h4 class='card-title'>".$movieArray[$i]->Title."</h4>"; // card title
-                echo "<h4 class='card-title'>".$movieArray[$i]->Year."</h4>"; // card title
-                echo "<a class='btn btn-danger' href='play.php?id=".$movieArray[$i]->Movie_ID ."'>Play</a>";                echo "</div>";// close card content
                 echo "</div>";// close poster
                 //TODO: Expansion: add Bookmark button to add to watch
                 echo "</div>";// close card

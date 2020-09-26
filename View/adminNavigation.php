@@ -31,5 +31,7 @@ include 'navbar.php';
 <?php
 include 'footer.php';
 include '../Controller/bootstrapScript.php';
+include '../Controller/ajaxScript.php';
+include '../Controller/navControl.js';
 ?>
 </html>

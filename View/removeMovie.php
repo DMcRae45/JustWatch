@@ -3,14 +3,6 @@
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-?>
-<html>
-
-<body>
-    <main>
-
-<?php
-
 if(isset($_SESSION['username']))
 {
   include '../Controller/getAllMovies.php';
@@ -67,9 +59,10 @@ echo "
   </div>
   ";
 
-// <Script>
+  include 'footer.php';
   include '../Controller/bootstrapScript.php';
-// </Script>
+  include '../Controller/ajaxScript.php';
+  include '../Controller/navControl.js';
 echo "
 </body>
 </html>
@@ -84,12 +77,3 @@ else
   header("Location: index.php?error=ACCESS DENIED");
 }
 ?>
-
-</main>
-</body>
-
-<?php
-include 'footer.php';
-include '../Controller/bootstrapScript.php';
-?>
-</html>

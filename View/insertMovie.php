@@ -4,13 +4,6 @@
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-
-?>
-<html>
-
-<body>
-  <main>
-<?php
 if(isset($_SESSION['username']))
 {
   if(isset($_GET['error']))
@@ -19,7 +12,6 @@ if(isset($_SESSION['username']))
     $error = str_replace(":","</br>", $error);
     echo $error;
   }
-
       echo "
 
       <body>
@@ -80,9 +72,11 @@ if(isset($_SESSION['username']))
           </div>
       </div>
       ";
-
+      include 'footer.php';
       include '../Controller/bootstrapScript.php';
       include '../Controller/ValidateEmptyFields.js';
+      include '../Controller/ajaxScript.php';
+      include '../Controller/navControl.js';
       echo "
       </body>
       </html>
@@ -91,14 +85,6 @@ if(isset($_SESSION['username']))
 else
 {
   header("Location: ../index.php");
+  //TODO: error when not logged in-displays error and dosent relocate user to index
 }
 ?>
-
-</main>
-</body>
-
-<?php
-include 'footer.php';
-include '../Controller/bootstrapScript.php';
-?>
-</html>

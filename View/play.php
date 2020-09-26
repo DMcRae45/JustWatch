@@ -18,13 +18,15 @@
       echo "<div class='videoPlayer' id='videoPlayer'>
       <video width='1000' height='500' src='".$movieArray->Video_link."' autoplay controls/></div>";
     ?>
-    </div
+  </div>
 </main>
 </body>
 <footer>
       <?php
-        include 'footer.php';
-        include '../Controller/bootstrapScript.php';
+      include 'footer.php';
+      include '../Controller/bootstrapScript.php';
+      include '../Controller/ajaxScript.php';
+      include '../Controller/navControl.js';
         ?>
 </footer>
 </html>

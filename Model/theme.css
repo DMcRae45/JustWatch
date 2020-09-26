@@ -32,7 +32,7 @@ body .form-control .input-group-text .custom-select
 
 body::-webkit-scrollbar
 {
-  width: 1rem;
+  width: .5rem;
 }
 
 body::-webkit-scrollbar-track
@@ -43,12 +43,6 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar-thumb
 {
   background: #E50914;
-}
-
-main
-{
-  margin-left: 5rem;
-  padding: 1rem;
 }
 
 .col
@@ -64,27 +58,15 @@ main
   position: relative;
   width: 250px;
   margin-top: 1rem;
-  border-radius: 10px;
-  border: 4px solid #141418;
 }
 
-.card .poster img
+ .poster img
 {
   width: 100%;
   height: 450px;
-}
-
-.card-content
-{
-  top:20rem;
-  left:0;
-  width:100%;
-  height:100%;
-  position: absolute;
-  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #E50914;
   cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
 }
 
 .playMovie
@@ -107,6 +89,7 @@ main
   background-color: var(--bg-secondary);
   z-index:100;
   padding: 0;
+
 }
 
 .list-group
@@ -171,18 +154,15 @@ main
   margin: 0 1.5rem;
   display: inline;
 }
-
 .fa-primary
 {
   color: #F84F57;
 }
-
 .fa-rimary, .fa-secondary
 {
   color: #E50914;
   transition: var(--transition-speed);
 }
-
 .logo
 {
   font-weight: bold;
@@ -190,18 +170,18 @@ main
   text-align: center;
   color: grey;
   background: black;
-  font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
   padding: 1rem;
 }
-
+#top:a{
+  font-size: 1.5rem;
+}
 .logo i
 {
   transform: rotate(0deg);
   transition: var(--transition-speed);
 }
-
 .logo-text
 {
   display: inline;
