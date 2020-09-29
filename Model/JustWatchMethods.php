@@ -191,115 +191,48 @@ function GetAllMovies()
 //Insert new Movie to database
 function AttemptInsertMovie()
 {
-    Require 'connection.php';
+  Require 'connection.php';
 
-    // Checks if submit button has been pressed
-    if (isset($_POST['insertMovieSubmit']))
+  // Checks if submit button has been pressed
+  if (isset($_POST['insertMovieSubmit']))
+  {
+    $title = (filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING));
+    $video = (filter_input(INPUT_POST, 'video', FILTER_SANITIZE_STRING));
+    $image = (filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING));
+    $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
+    $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
+    $year = (filter_input(INPUT_POST, 'year',FILTER_SANITIZE_STRING ));
+
+    $query = $connection->prepare
+    ("
+
+    INSERT INTO Movie (Title, Video_link, Image_link, Description, Genre, Year)
+    VALUES (:title, :video, :image, :description, :genre, :year)
+
+    ");
+
+    $success = $query->execute
+    ([
+      'title' => $title,
+      'video' => $video,
+      'image' => $image,
+      'description' => $description,
+      'genre' => $genre,
+      'year' => $year
+    ]);
+
+    $count = $query->rowCount();
+    if($count > 0)
     {
-
-        $file = $_FILES['image_link'];
-
-        $fileName = $_FILES['image_link']['name'];
-        $fileTmpName = $_FILES['image_link']['tmp_name'];
-        $fileSize = $_FILES['image_link']['size'];
-        $fileError = $_FILES['image_link']['error'];
-        $fileType = $_FILES['image_link']['type'];
-
-        $fileExt = explode('.', $fileName);
-        $fileActualExt = strtolower(end($fileExt));
-
-        $allowed = array('jpg', 'jpeg', 'png');
-
-        // Checks if file is an allowed type
-        if (in_array($fileActualExt, $allowed))
-        {
-            // Checks there are no errors
-            if ($fileError === 0)
-            {
-                // Checks file size is below stated value
-                if ($fileSize < 2000000)
-                {
-                    // Determines file location
-                    $fileDestination = 'Images/' . $fileName;
-                    // Sends file to specified location
-
-                    // Once complete carry out the INSERT statement to database
-                    $title = (filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING));
-                    $video = (filter_input(INPUT_POST, 'video', FILTER_SANITIZE_STRING));
-                    $image = $fileDestination;
-                    $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
-                    $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
-                    $year = (filter_input(INPUT_POST, 'year',FILTER_SANITIZE_STRING ));
-
-                    $Error = false;
-                    $videoError;
-                    $descriptionError;
-                    $genreError;
-                    //TODO: Insert year preg
-                    if(!preg_match("/^[a-zA-Z ]*$/",$genre))
-                    {
-                      $Error = true;
-                      $genreError = ":Genre can only contain letters.";
-                    }
-
-                    if($Error == true) // An Error Has Occured
-                    {
-                      $errorString = $videoError.$genreError;
-                      header('Location: ../View/insertMovie.php?error='.$errorString);
-                    }
-                    else
-                    {
-
-                    $query = $connection->prepare
-                    ("
-
-                    INSERT INTO Movie (Title, Video_link, Image_link, Description, Genre, Year)
-                    VALUES (:title, :video, :image, :description, :genre, :year)
-
-                    ");
-
-                    $success = $query->execute
-                    ([
-                      'title' => $title,
-                      'video' => $video,
-                      'image' => $image,
-                      'description' => $description,
-                      'genre' => $genre,
-                      'year' => $year
-
-                    ]);
-
-                    $count = $query->rowCount();
-                    if($count > 0)
-                    {
-                      $validError = "Success";
-                      header('location: ../View/insertMovie.php?error='.$validError);
-                    }
-                    else
-                    {
-                      $invalidError = "Insert Failed";
-                      header('location: ../View/insertMovie.php?error='.$invalidError);
-                    }
-                  }
-                }
-                else
-                {
-                    $invalidError = "Your file is too big!";
-                    header('location: ../View/insertMovie.php?error='.$invalidError);
-                }
-            }
-            else
-            {
-                $invalidError = "There was an error uploading your file!";
-                header('location: ../View/insertMovie.php?error='.$invalidError);
-            }
-        }
-        else
-        {
-            $invalidError = "You cannot upload files of this type!";
-            header('location: ../View/insertMovie.php?error='.$invalidError);
-        }
+      $validError = "Success";
+      header('location: ../View/insertMovie.php?error='.$validError);
     }
+    else
+    {
+      $invalidError = "Insert Failed";
+      header('location: ../View/insertMovie.php?error='.$invalidError);
+    }
+  }
 }
 
 // Attempt to update a movies details

@@ -35,14 +35,14 @@ if(isset($_SESSION['username']))
                     <div class='input-group-prepend'>
                       <span class='input-group-text' id='inputGroupPrepend'>Video</span>
                     </div>
-                      <input class='form-control' type='text' name='video' placeholder='Enter file path to mp4 file' required>
+                      <input class='form-control' type='text' name='video' placeholder='Path to mp4 file' required>
                   </div>
 
                   <div class='form-group input-group' form-group-lg>
                     <div class='input-group-prepend'>
-                      <span class='input-group-text' id='inputGroupPrepend'>Poster Image</span>
+                      <span class='input-group-text' id='inputGroupPrepend'>Image</span>
                     </div>
-                    <input class='btn btn-outline-light' type='file' name='image_link' placeholder='Image_link' required>
+                      <input class='form-control' type='text' name='image' placeholder='Path to Poster image' required>
                   </div>
 
                   <div class='form-group input-group'>
