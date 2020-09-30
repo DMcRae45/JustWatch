@@ -36,30 +36,46 @@ if (isset($_GET['id']))
             <div class='col-md-4'>
               <div class='card form-group input-group' form-group-lg>
                 <img src='".$movieArray->Image_link."' class='card-img-top' alt='Movie Poster' onerror=this.src='images/film.placeholder.poster.jpg'>
-                <input class='btn btn-dark inputfile' type='file' name='image_link' required/>
-              </div>
-            </div>";
-            echo "<div class='col-md-8'>
-                      <div class='input-group'>
-                        <div class='input-group-prepend'>
-                          <span class='input-group-text' id='inputGroupPrepend'>Video</span>
-                        </div>";
-                  echo "<input class='form-control' type='text' name='video' placeholder='Please enter path to mp4 file' value='".$movieArray->Video_link."' required>
-                      </div>
-                    </div>";
-          echo "<div class='form-group input-group' form-group-lg>
-                  <div class='input-group-prepend'>
-                    <span class='input-group-text' id='inputGroupPrepend'>Movie ID</span>
-                  </div>
-                  <input class='form-control' type='text' name='index' value='".$movieArray->Movie_ID."' readonly>
-                </div>";
-          echo "<div class='form-group input-group' form-group-lg>
-                  <div class='input-group-prepend'>
-                    <span class='input-group-text' id='inputGroupPrepend'>Title</span>
-                  </div>
-                  <input class='form-control' type='text' name='title' placeholder='Title' value='".$movieArray->Title."' required>
                 </div>
+            </div>";
+
+            echo "<div class='col-md-8'>
+
+            <div class='form-group input-group form-group-lg'>
+              <div class='input-group-prepend'>
+                <span class='input-group-text' id='inputGroupPrepend'>Movie ID</span>
               </div>
+              <input class='form-control' type='text' name='index' value='".$movieArray->Movie_ID."' readonly>
+            </div>
+
+            <div class='form-group input-group' form-group-lg>
+              <div class='input-group-prepend'>
+                <span class='input-group-text' id='inputGroupPrepend'>Title</span>
+              </div>
+              <input class='form-control' type='text' name='title' placeholder='Title' value='".$movieArray->Title."' required>
+            </div>
+
+
+            <div class='form-group input-group'>
+              <div class='input-group-prepend'>
+                <span class='input-group-text' id='inputGroupPrepend'>Poster</span>
+              </div>
+
+              <input class='form-control' type='text' name='image' placeholder='Please enter path to Poster image' value='".$movieArray->Image_link."' required>
+            </div>
+
+
+            <div class='form-group input-group'>
+              <div class='input-group-prepend'>
+                <span class='input-group-text' id='inputGroupPrepend'>Video</span>
+              </div>
+              <input class='form-control' type='text' name='video' placeholder='Please enter path to mp4 file' value='".$movieArray->Video_link."' required>
+            </div>
+
+          </div>";
+
+
+          echo "
             </div>";
           echo "<div class='form-group input-group'>
             <div class='input-group-prepend'>
