@@ -16,7 +16,6 @@
   ?>
 <!-- </head> -->
 <body>
-  <main>
     <?php
     //TODO: Sort by year(first showing current year when pressed then reverses to oldest when pressed again) and genre options?
 
@@ -29,7 +28,7 @@
             echo $error;
           }
           ?>
-            <div class="container text-center">
+            <div class="container text-center mt-2">
               <h1>Movies</h1><hr>
 
               <?php
@@ -80,6 +79,5 @@
           include '../Controller/ajaxScript.php';
           include '../Controller/navControl.js';
           ?>
-        </main>
     </body>
 </html>

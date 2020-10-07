@@ -1,27 +1,52 @@
 
 <?php
-$dir    = 'Images';
+Require '../Model/connection.php';
+$dir    = 'Movies';
 $files = scandir($dir);
 
-echo "Hello";
-echo "</br>";
-
-echo "Before </br>";
+// remove file extension
 for ($i=0 ; $i < sizeof($files) ; $i++)
 {
-  echo $files[$i]."</br>";
-}
+  //$noExtension = rtrim($files[$i], ".jpg, .png");
 
-for ($i=0 ; $i < sizeof($files) ; $i++)
-{
+  $titleNoSpaces = strtok($files[$i], '_');
+  $title = preg_replace('/(?<!\ )[A-Z]/', ' $0', $titleNoSpaces);
+  $year = trim(strrev(strstr(strrev((strstr($files[$i], '_'))), '.')), '_.');
 
-  $files[$i] = str_replace('.', '_', $files[$i]);
+  $video = "Movies/".$files[$i];
+  $image = "Images/film.placeholder.poster.jpg";
+  $description = "Awaiting Description";
+  $genre = "genre";
 
-}
+  $query = $connection->prepare
+  ("
 
-  echo "After </br>";
-  for ($i=0 ; $i < sizeof($files) ; $i++)
+  INSERT INTO Movie (Title, Video_link, Image_link, Description, Genre, Year)
+  VALUES (:title, :video, :image, :description, :genre, :year)
+
+  ");
+
+  $success = $query->execute
+  ([
+    'title' => $title,
+    'video' => $video,
+    'image' => $image,
+    'description' => $description,
+    'genre' => $genre,
+    'year' => $year
+  ]);
+
+  $count = $query->rowCount();
+  if($count > 0)
   {
-    echo $files[$i]."</br>";
+    echo $count."Rows effected";
   }
+  else
+  {
+    echo "Insert Failed";
+  }
+
+}
+
+
 ?>

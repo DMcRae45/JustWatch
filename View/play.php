@@ -14,7 +14,8 @@
       <div class="playMovie">
     <?php
       echo "<div class='videoPlayer' id='videoPlayer'>
-      <video width='1000' height='500' src='".$movieArray->Video_link."' autoplay controls/></div>";
+        <video width='1000' height='500' src='".$movieArray->Video_link."' type='video/mp4'> autoplay controls/>
+      </div>";
       echo "<h1 class='movieTitle'>".$movieArray->Title."</h1><br>";
     ?>
   </div>
