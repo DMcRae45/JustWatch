@@ -8,7 +8,7 @@
 <footer class="footer">
 <div class="container">
   <div class="row">
-    <div class="col-xl-12">
+    <div class="col-12">
       <p class="text-center">
         <a> Made By: Oliver Dickens & David McRae</a>
       </p>

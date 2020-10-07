@@ -5,17 +5,10 @@ Author: David McRae, Oliver Dickens
 */
 ?>
 <nav class="navbar d-flex d-inline no-gutters row">
-  <div class ="col-2" id="top">
+  <div class ="col" id="top">
     <a class="btn logo" >JustWatch <i class="fas fa-angle-double-right"></i></a>
-  </div>
-  <div class="col-10 row no-gutters justify-content-center">
-    <form class="form-inline col-10">
-      <input class="form-control col-10" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-danger col-2" type="submit">Search</button>
-    </form>
-  </div>
   <div class="sideBar row no-gutters justify-content-center" id="sideBar">
-    <ul class="list-group col-2">
+    <ul class="list-group col">
     <li class="list-group-item">
       <a href="newReleases.php" class="nav-link">
         <div class="fa-secondary fa-lg">
@@ -65,6 +58,13 @@ Author: David McRae, Oliver Dickens
       </a>
     </li>
   </ul>
+</div>
+  </div>
+<div class="col-10 row no-gutters justify-content-center">
+  <form class="form-inline col-10">
+    <input class="form-control col-10" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-danger col-2" type="submit">Search</button>
+  </form>
 </div>
 </nav>
 
