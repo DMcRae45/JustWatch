@@ -16,9 +16,6 @@ and sets my colour sheme*/
   --transition-speed: 600ms;
   --transitionCard-speed: 400ms;
 }
-*{
-  margin: 0;
-}
 
 body
 {

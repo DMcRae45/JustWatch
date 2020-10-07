@@ -4,12 +4,12 @@ Description: Navigation bar at the top of each page.
 Author: David McRae, Oliver Dickens
 */
 ?>
-<nav class="navbar d-flex d-inline no-gutters row">
+<nav class="navbar no-gutters row">
   <div class ="col-2" id="top">
     <a class="btn logo" >JustWatch <i class="fas fa-angle-double-right"></i></a>
   </div>
   <div class="col-10 row no-gutters justify-content-center">
-    <form class="form-inline col-10">
+    <form class="form-inline col-10 mt-3">
       <input class="form-control col-10" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-danger col-2" type="submit">Search</button>
     </form>
