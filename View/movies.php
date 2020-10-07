@@ -50,6 +50,10 @@
                 echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
                 echo "</div>";// close poster
                 //TODO: Expansion: add Bookmarked button to add to watch list
+                echo "<div class='card-bottom'>";
+                echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
+                echo "<class='movieTitle'>".$movieArray[$i]->Year."";
+                echo "</div>";// close card-bottom
                 echo "</div>";// close card
                 echo "</div>";// close col
 

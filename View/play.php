@@ -13,17 +13,24 @@
   <main>
       <div class="playMovie">
     <?php
-
-      echo "<h1 class='movieTitle'>".$movieArray->Title."</h1>";
       echo "<div class='videoPlayer' id='videoPlayer'>
       <video width='1000' height='500' src='".$movieArray->Video_link."' autoplay controls/></div>";
+      echo "<h1 class='movieTitle'>".$movieArray->Title."</h1><br>";
     ?>
   </div>
+
+  <div class="playMovieDescription">
+<?php
+  echo "<h5 class='movieTitle'>".$movieArray->Year."</h5>";
+  echo "<h5 class='movieTitle'>".$movieArray->Genre."</h5>";
+  echo "<h5 class='movieTitle'>".$movieArray->Description."</h5>";
+?>
+</div>
 </main>
 </body>
 <footer>
       <?php
-      include 'footer.php';
+
       include '../Controller/bootstrapScript.php';
       include '../Controller/ajaxScript.php';
       include '../Controller/navControl.js';
