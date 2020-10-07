@@ -59,14 +59,18 @@ body::-webkit-scrollbar-thumb
   position: relative;
   width: 250px;
   margin-top: 1rem;
+  border-radius: 10px;
+  border: 4px solid #000 ;
+}
+.card:hover
+{
+  border: 4px solid #E50914;
 }
 
  .poster img
 {
   width: 100%;
   height: 450px;
-  border-radius: 10px;
-  border: 1px solid #E50914;
   cursor: pointer;
 }
 
@@ -205,4 +209,20 @@ body::-webkit-scrollbar-thumb
 {
   border: none;
   margin: 0;
+}
+/* Small screens */
+@media only screen and (max-width: 600px) {
+
+  .navbar {
+    top: -1;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main {
+    margin: 0;
+  }
 }

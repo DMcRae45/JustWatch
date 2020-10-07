@@ -66,5 +66,11 @@ Author: David McRae, Oliver Dickens
     </li>
   </ul>
 </div>
-
 </nav>
+
+<?php
+/*
+//TODO: possible nav bar extension or mini nav for mobiles
+Description: Navigation bar for mobiles and smaller screens.
+*/
+?>
