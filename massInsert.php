@@ -39,11 +39,11 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
   $count = $query->rowCount();
   if($count > 0)
   {
-    echo $count."Rows effected";
+    echo $count."Rows effected"."</br>";
   }
   else
   {
-    echo "Insert Failed";
+    echo "Inserting".$title." Failed"."</br>";
   }
 
 }
