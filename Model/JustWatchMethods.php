@@ -247,8 +247,8 @@ function AttemptUpdateMovie()
     // Once complete carry out the INSERT statement to database
     $title = (filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING));
     $video = (filter_input(INPUT_POST, 'video', FILTER_SANITIZE_STRING));
-    $image = (filter_input(INPUT_POST, 'video', FILTER_SANITIZE_STRING));
-    $description = (filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING));
+    $image = (filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING));
+    $description = (filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING));
     $genre = (filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING));
     $year = (filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING));
 

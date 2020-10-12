@@ -18,7 +18,7 @@ include 'navbar.php';
           <a class='btn btn-outline-primary btn-block' href='insertMovie.php'>Add Movie</a>
         </div>
         <div class='col-md-6 mt-5'>
-          <a class='btn btn-outline-success btn-block' href='alterMovies.php'>Alter Movie</a>
+          <a class='btn btn-outline-success btn-block' href='updateMovies.php'>Alter Movie</a>
         </div>
       </div>
       <div class='row'>
