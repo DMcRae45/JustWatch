@@ -9,7 +9,8 @@
   <body>
     <main>
     <div class="container text-center jumbotron mt-5">
-    <h1>User log in</h1><hr>
+    <h1>User log in</h1>
+    <hr>
     <?php //Error Reporting for the user
     if(isset($_GET['error']))
     {
