@@ -280,12 +280,12 @@ function AttemptUpdateMovie()
     if($count > 0)
     {
       $validError = "Success";
-      header('location: ../View/alterMovies.php?error='.$validError);
+      header('location: ../View/updateMovies.php?error='.$validError);
     }
     else
     {
       $invalidError = "Insert Failed";
-      header('location: ../View/alterMovies.php?error='.$invalidError);
+      header('location: ../View/updateMovies.php?error='.$invalidError);
     }
   }
 }
