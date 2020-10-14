@@ -36,7 +36,7 @@
 
               <?php
               $rows = 0;
-              $cols = 6;
+              $cols = 10;
               $counter = 1;
               $nbsp = $cols - ($rows % $cols);
               for ($i=0 ; $i < sizeof($movieArray) ; $i++)
