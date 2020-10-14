@@ -16,10 +16,13 @@
   ?>
 <!-- </head> -->
 <body>
+
+  <div class="containerSearch text-center">
+    <h1>Search</h1><hr>
     <?php
     //TODO: Sort by year(first showing current year when pressed then reverses to oldest when pressed again) and genre options?
-
     ?>
+  </div>
     <?php
       //Error Reporting for the users
         if(isset($_GET['error']))
@@ -33,7 +36,7 @@
 
               <?php
               $rows = 0;
-              $cols = 4;
+              $cols = 5;
               $counter = 1;
               $nbsp = $cols - ($rows % $cols);
               for ($i=0 ; $i < sizeof($movieArray) ; $i++)

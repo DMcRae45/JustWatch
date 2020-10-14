@@ -6,7 +6,6 @@
 ?>
 <!-- footer start -->
 <footer class="footer">
-<div class="container">
   <div class="row">
     <div class="col-12 text-center">
       <p class="text-center">
@@ -16,6 +15,5 @@
     DNS server by ©<a href="http://freedns.afraid.org/">Free DNS</a>
     </div>
   </div>
-</div>
 </footer>
 <!--/ footer end  -->
