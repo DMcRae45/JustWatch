@@ -1,4 +1,4 @@
-<html>
+
 <?php
 /*
 Authors: David McRae & Oliver Dickens
@@ -61,4 +61,3 @@ include '../Controller/bootstrapScript.php';
 include '../Controller/ajaxScript.php';
 include '../Controller/navControl.js';
 ?>
-</html>

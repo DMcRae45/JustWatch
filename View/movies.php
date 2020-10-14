@@ -10,19 +10,21 @@
 <!--<head>-->
   <?php
   include '../Controller/session.php';
-  include '../Controller/getAllMovies.php';
+
+  if(!isset($_GET['filter']))
+  {
+    include '../Controller/getAllMovies.php';
+  }
+  else
+  {
+    $movieFilter = $_GET['filter'];
+    include '../Controller/getMoviesByFilter.php';
+  }
   include 'header.php';
   include 'navbar.php';
   ?>
 <!-- </head> -->
 <body>
-
-  <div class="containerSearch text-center">
-    <h1>Search</h1><hr>
-    <?php
-    //TODO: Sort by year(first showing current year when pressed then reverses to oldest when pressed again) and genre options?
-    ?>
-  </div>
     <?php
       //Error Reporting for the users
         if(isset($_GET['error']))
