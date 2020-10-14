@@ -75,7 +75,7 @@ footer
 .card
 {
   position: relative;
-  width: 180px;
+  width: 12rem;
   margin-top: 1rem;
   border-radius: 10px;
   border: 4px solid #000 ;
@@ -88,7 +88,7 @@ footer
  .poster img
 {
   width: 100%;
-  height: 250px;
+  height: 15rem;
   cursor: pointer;
 }
 .card-bottom{
@@ -232,10 +232,16 @@ display: none;
     align-items: center;
     margin-top: 1rem;
   }
-
+  .card
+  {
+    width: 10rem;
+  }
+  .poster img
+ {
+   height: 12rem;
+ }
   .col-10
   {
     display: none;
   }
-
 }

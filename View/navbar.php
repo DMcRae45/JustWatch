@@ -40,7 +40,7 @@ Author: David McRae, Oliver Dickens
     </div>
   </div>
 
-  <div class="col-10 row no-gutters justify-content-center">
+  <div class="col-10 row no-gutters justify-content-center mt-2">
     <form class="form-inline col-10" method="GET">
       <input class="form-control col-10" type="search" placeholder="Search by Title" name="filter">
       <button class="btn btn-danger col-2" type="submit">Search</button>
