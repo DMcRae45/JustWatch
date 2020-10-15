@@ -25,6 +25,29 @@
   ?>
 <!-- </head> -->
 <body>
+  <div class="container">
+    <div class="row mt-2">
+
+      <form class="form-inline col-6" method="GET">
+        <div class='form-group input-group'>
+          <div class='input-group-prepend'>
+            <span class='input-group-text' id='inputGroupPrepend'>Order By</span>
+          </div>
+          <select class='custom-select' name='orderBy'>
+            <option value=''>Order By</option>
+            <option value='year'>year</option>
+            <option value='alphabetical'>alphabetical</option>
+          </select>
+        </div>
+      </form>
+
+      <form class="form-inline col-6" method="GET">
+        <input class="form-control col-10" type="search" placeholder="Search by Title" name="filter">
+        <button class="btn btn-danger col-2" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
     <?php
       //Error Reporting for the users
         if(isset($_GET['error']))
