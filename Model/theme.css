@@ -86,7 +86,7 @@ footer
 
  .poster img
 {
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 4px solid #000 ;
   width: 100%;
   height: 15rem;
