@@ -28,6 +28,7 @@ else
             </a>
             ";
           }
+          // TODO check maximum number of pages
         echo "
         </li>
         <li class='page-item'><a class='page-link' href='movies.php?page=1'>1</a></li>
