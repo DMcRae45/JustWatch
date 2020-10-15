@@ -74,19 +74,20 @@ footer
 
 .card
 {
+  background-color: var(--bg-primary);
   position: relative;
   width: 12rem;
   margin-top: 1rem;
-  border-radius: 10px;
-  border: 4px solid #000 ;
 }
-.card:hover
+.poster img:hover
 {
   border: 4px solid var(--bg-danger);
 }
 
  .poster img
 {
+  border-radius: 10px;
+  border: 4px solid #000 ;
   width: 100%;
   height: 15rem;
   cursor: pointer;
