@@ -166,11 +166,16 @@ function AttemptLogOut()
 }
 
 //Read All Movies
-function GetAllMovies()
+function GetAllMovies($page)
 {
     require_once 'connection.php';
 
-    $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc";
+    $amountPerPage = 50;
+
+    $startAtRowNo = $page * $amountPerPage;
+    $offset = $startAtRowNo - $amountPerPage;
+
+    $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
 
     $stmt = $connection->prepare($sql);
     $result = $stmt->fetch();
@@ -418,42 +423,4 @@ function getSeriesByID($seriesid)
   {
     echo "Unable to find Series";
   }
-}
-
-
-function pageResults()
-{
-  require 'connection.php';
-  // find out the number of results stored in database
-  $sql='SELECT * FROM movies';
-  $result = mysqli_query($con, $sql);
-  $number_of_results = mysqli_num_rows($result);
-  // define how many results you want per page
-  $results_per_page = 50;
-  // determine number of total pages available
-  $number_of_pages = ceil($number_of_results/$results_per_page);
-
-  // determine which page number visitor is currently on
-  if (!isset($_GET['page'])) {
-    $page = 1;
-  } else {
-    $page = $_GET['page'];
-  }
-
-  // determine the sql LIMIT starting number for the results on the displaying page
-  $this_page_first_result = ($page-1)*$results_per_page;
-
-  // retrieve selected results from database and display them on page
-  $sql='SELECT * FROM movies LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
-  $result = mysqli_query($con, $sql);
-
-  while($row = mysqli_fetch_array($result)) {
-    echo $row['id'] . ' ' . $row['movies']. '<br>';
-  }
-
-  // display the links to the pages
-  for ($page=1;$page<=$number_of_pages;$page++) {
-    echo '<a href="View/movies.php?page=' . $page . '">' . $page . '</a> ';
-  }
-
 }

@@ -8,6 +8,15 @@
 
 Include '../Model/JustWatchMethods.php';
 
-$movies = GetAllMovies();
+if(!isset($_GET['page']))
+{
+  $page = 1;
+}
+else
+{
+  $page = $_GET['page'];
+}
+
+$movies = GetAllMovies($page);
 $movieArray = json_decode($movies);
 ?>
