@@ -12,10 +12,10 @@ else
       <ul class='pagination justify-content-center'>
         <li class='page-item'>
           ";
-          if($page < 2)
+          if($page == 1)
           {
             echo "
-            <a class='page-link disabled' href='movie.php?page=".($page -1)."' aria-label='nob'>
+            <a class='page-link btn disabled' href='movies.php?page=".($page -1)."' aria-label='nob'>
             <span>Previous</span>
             </a>
             ";
@@ -39,10 +39,10 @@ else
         <li class='page-item'><a class='page-link' href='movies.php?page=".($page +5)."'>".($page +5)."</a></li>
         <li class='page-item'>
         ";
-        if($page > 8)
+        if($page >= 8)
         {
           echo "
-          <a class='page-link disabled' href='#' aria-label='Next'>
+          <a class='page-link btn disabled' href='movies.php?page=".($page +1)."' aria-label='Next'>
             <span>Next</span>
           </a>
           ";
