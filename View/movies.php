@@ -93,11 +93,17 @@
               ?>
               <?php
               if(!isset($_GET['page']))
-                {
-                  $page = 1;
+              {
+                $page = 1;
+              }
+              else
+              {
+                $page = $_GET['page'];
+              }
+
 
                   echo "
-                  <nav>
+                  <div>
                     <ul class='pagination'>
                       <li class='page-item'>
                         ";
@@ -105,8 +111,7 @@
                         {
                           echo "
                           <a class='page-link disabled' href='movie.php?page=".($page -1)."' aria-label='nob'>
-                          <span aria-hidden='true'>Previous</span>
-                          <span class='sr-only'>Previous</span>
+                          <span>Previous</span>
                           </a>
                           ";
                         }
@@ -114,25 +119,24 @@
                         {
                           echo "
                           <a class='page-link' href='movies.php?page=".($page -1)."' aria-label='Dick'>
-                          <span aria-hidden='true'>Previous</span>
-                          <span class='sr-only'>Previous</span>
+                          <span>Previous</span>
                           </a>
                           ";
                         }
                       echo "
                       </li>
-
+                      <li class='page-item'><a class='page-link' href='movies.php?page=".($page -5)."'>".($page -5)."</a></li>
+                      <li class='page-item'><a class='page-link' href='movies.php?page=".($page -2)."'>".($page -2)."</a></li>
                       <li class='page-item'><a class='page-link' href='#'>".$page."</a></li>
-                      <li class='page-item'><a class='page-link' href='movies.php?page=".($page +1)."'>".($page +1)."</a></li>
                       <li class='page-item'><a class='page-link' href='movies.php?page=".($page +2)."'>".($page +2)."</a></li>
+                      <li class='page-item'><a class='page-link' href='movies.php?page=".($page +5)."'>".($page +5)."</a></li>
                       <li class='page-item'>
                       ";
                       if($page > 8)
                       {
                         echo "
                         <a class='page-link disabled' href='#' aria-label='Next'>
-                          <span aria-hidden='true'>next</span>
-                          <span class='sr-only'>Next</span>
+                          <span>Next</span>
                         </a>
                         ";
                       }
@@ -140,17 +144,15 @@
                       {
                         echo "
                         <a class='page-link' href='movies.php?page=".($page +1)."' aria-label='Next'>
-                          <span aria-hidden='true'>next</span>
-                          <span class='sr-only'>Next</span>
+                          <span>Next</span>
                         </a>
                         ";
                       }
                       echo "
                       </li>
                     </ul>
-                  </nav>
+                  </div>
                   ";
-                }
                 ?>
 
           <?php
