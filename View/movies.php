@@ -59,47 +59,72 @@
             <div class="container text-center mt-2">
               <h1>Movies</h1><hr>
 
-              <?php
-              $rows = 0;
-              $cols = 10;
-              $counter = 1;
-              $nbsp = $cols - ($rows % $cols);
-              for ($i=0 ; $i < sizeof($movieArray) ; $i++)
-              {
+<?php
+echo"
+              <div class='no-gutters' id='Movies'>
+                <div class='col-12 row no-gutters'>
+                  ";
 
-                if(($counter % $cols) == 1)
-                {
-                  echo '<div class="row">';
-                }
-                echo "<div class='col'>"; // open col
-                echo "<div class='card'>"; // Open card div
-                echo "<div class='poster' >"; // Open card poster
-                echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
-                echo "</div>";// close poster
-                //TODO: Expansion: add Bookmarked button to add to watch list
-                echo "<div class='card-bottom'>";
-                echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
-                echo "<class='movieTitle'>".$movieArray[$i]->Year."";
-                echo "</div>";// close card-bottom
-                echo "</div>";// close card
-                echo "</div>";// close col
+                  for ($i=0 ; $i < sizeof($movieArray) ; $i++)
+                  {
+                    //clickable item, Movie card.
+                    echo"
+                    <div class=''><a class='btn text-light' data-toggle='modal' data-target='#".$movieArray[$i]->Title."'>
+                      <div class='card'>
+                        <h6 class='card-title'>".$movieArray[$i]->Title."</h6>
 
-                if(($counter % $cols) == 0)
-                {
-                  echo '</div>';
-                }
-                $counter++;
-              }
+                        <img src='".$movieArray[$i]->Image_link."' class='card-img-top homePage' alt='Movie Poster' onerror=this.src='images/film.placeholder.poster.jpg'>
+                        ";
+                        //  <ul class='list-group list-group-flush'>
+                        //    <li class='list-group-item'>Genre: <text>".$movieArray[$i]->Genre."</text></li>
+                        //    <li class='list-group-item'>Genre: <text>".$movieArray[$i]->Year."</text></li>
+                        //  </ul>
+                      echo "
+                      </div>
+                    </div>
+                    ";
 
-              if($nbsp > 0)
-              {
-                for ($i = 0; $i < $nbsp; $i++)
-                {
-                  echo'<div class="col-md-4">&nbsp;</div>';
-                }
-              }
-              echo '</div></div><br>';
-              ?>
+                    // Hidden modal content
+                    echo "
+                    <div class='modal fade' id='".$movieArray[$i]->Title."' tabindex='-1' role='dialog' aria-labelledby='modal' aria-hidden='true'>
+
+                      <div class='container modal-dialog' role='document'>
+
+                        <div class='modal-content bg-dark'>
+                          <div class='modal-header'>
+                            <h5 class='modal-title' id='".$movieArray[$i]->Title."'>'".$movieArray[$i]->Title."'</h5>
+                            <button type='button' class='close btn btn-dark' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                          </div>
+                        </div>
+
+
+                        <ul class='list-group'>
+                          <li class='list-group-item d-flex justify-content-between align-items-center'>
+                            Description: <text>".$movieArray[$i]->Description."</text>
+                          </li>
+                          <li class='list-group-item d-flex justify-content-between align-items-center'>
+                            Genre: <text>".$movieArray[$i]->Genre."</text>
+                          </li>
+                          <li class='list-group-item d-flex justify-content-between align-items-center'>
+                            Year: <text>".$movieArray[$i]->Year."</text>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    ";
+                  }
+                  ?>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
 
           <?php
           include 'footer.php';
