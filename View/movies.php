@@ -69,7 +69,7 @@ echo"
                   {
                     //clickable item, Movie card.
                     echo"
-                    <div class=''><a class='btn text-light' data-toggle='modal' data-target='#".$movieArray[$i]->Title."'>
+                    <div class=''><a class='btn text-light' data-toggle='modal' data-target='#".str_replace(' ', '-', $movieArray[$i]->Title)."'>
                       <div class='card'>
                         <h6 class='card-title'>".$movieArray[$i]->Title."</h6>
 
@@ -86,13 +86,13 @@ echo"
 
                     // Hidden modal content
                     echo "
-                    <div class='modal fade' id='".$movieArray[$i]->Title."' tabindex='-1' role='dialog' aria-labelledby='modal' aria-hidden='true'>
+                    <div class='modal fade' id='".str_replace(' ', '-', $movieArray[$i]->Title)."' tabindex='-1' role='dialog' aria-labelledby='modal' aria-hidden='true'>
 
                       <div class='container modal-dialog' role='document'>
 
                         <div class='modal-content bg-dark'>
                           <div class='modal-header'>
-                            <h5 class='modal-title' id='".$movieArray[$i]->Title."'>'".$movieArray[$i]->Title."'</h5>
+                            <h5 class='modal-title' id='".str_replace(' ', '-', $movieArray[$i]->Title)."'>'".$movieArray[$i]->Title."'</h5>
                             <button type='button' class='close btn btn-dark' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                           </div>
                         </div>
