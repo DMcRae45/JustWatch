@@ -91,9 +91,11 @@
                   echo'<div class="col-md-4">&nbsp;</div>';
                 }
               }
-              echo "</div>";
               include 'pageNavigation.php';
-              echo "</div><br>";
+            echo "
+            </div>              
+            </div>
+            <br>";
               ?>
 
 

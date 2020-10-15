@@ -9,7 +9,7 @@ else
 }
     echo "
     <div>
-      <ul class='pagination'>
+      <ul class='pagination justify-content-center'>
         <li class='page-item'>
           ";
           if($page < 2)
@@ -30,10 +30,12 @@ else
           }
         echo "
         </li>
-        <li class='page-item'><a class='page-link' href='movies.php?page=".($page -5)."'>".($page -5)."</a></li>
-        <li class='page-item'><a class='page-link' href='movies.php?page=".($page -2)."'>".($page -2)."</a></li>
-        <li class='page-item'><a class='page-link' href='#'>".$page."</a></li>
+        <li class='page-item'><a class='page-link' href='movies.php?page=1'>1</a></li>
+        <li class='page-item'><a class='page-link' href='movies.php?page=".$page."'>".$page."</a></li>
+        <li class='page-item'><a class='page-link' href='movies.php?page=".($page +1)."'>".($page +1)."</a></li>
         <li class='page-item'><a class='page-link' href='movies.php?page=".($page +2)."'>".($page +2)."</a></li>
+        <li class='page-item'><a class='page-link' href='movies.php?page=".($page +3)."'>".($page +3)."</a></li>
+        <li class='page-item'><a class='page-link' href='movies.php?page=".($page +4)."'>".($page +4)."</a></li>
         <li class='page-item'><a class='page-link' href='movies.php?page=".($page +5)."'>".($page +5)."</a></li>
         <li class='page-item'>
         ";
