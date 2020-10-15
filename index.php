@@ -14,7 +14,7 @@ include 'View/header.php';
     <h1>JustWatch</h1><hr>
     <h3>
       This Site is restricted to personal use <u>only</u>.<p>
-        Please <a href="View/login.php">Login</a> to prove you are a registered user.
+      Please <a href="View/login.php">Login</a> to prove you are a registered user.
       </h3>
     </div>
   </body>
