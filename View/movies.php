@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<?php
+<html>
+<!--<head>-->
+  <?php
 /*
     Description: JustWatch Movies for free viewing.
     Author: David McRae, Oliver Dickens
 */
-
-?>
-<html>
-<!--<head>-->
-  <?php
   include '../Controller/session.php';
 
   if(!isset($_GET['filter']))
@@ -25,11 +22,10 @@
   ?>
 <!-- </head> -->
 <body>
-  <div class="container">
-    <div class="row mt-2">
-
-      <form class="form-inline col-6" method="GET">
-        <div class='form-group input-group'>
+  <div class="container mt-5">
+    <div class="row">
+      <form class="form-inline col justify-content-center" method="GET">
+        <div class='form-group input-group '>
           <div class='input-group-prepend'>
             <span class='input-group-text' id='inputGroupPrepend'>Order By</span>
           </div>
@@ -38,14 +34,9 @@
             <option value='year'>year</option>
             <option value='alphabetical'>alphabetical</option>
           </select>
+            <button class="btn btn-danger" type="submit">sort</button>
         </div>
       </form>
-
-      <form class="form-inline col-6" method="GET">
-        <input class="form-control col-10" type="search" placeholder="Search by Title" name="filter">
-        <button class="btn btn-danger col-2" type="submit">Search</button>
-      </form>
-
     </div>
   </div>
     <?php
@@ -58,9 +49,8 @@
           ?>
             <div class="container text-center mt-2">
               <h1>Movies</h1><hr>
-
               <?php
-              // USE THIS VERSION FROM NOW ON
+                // USE THIS VERSION FROM NOW ON
               $rows = 0;
               $cols = 10;
               $counter = 1;

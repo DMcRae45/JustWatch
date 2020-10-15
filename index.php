@@ -9,7 +9,7 @@ include 'Controller/session.php';
 include 'View/header.php';
 ?>
 
-<body>
+<body bg-black>
   <div class="container text-center jumbotron mt-5">
     <h1>JustWatch</h1><hr>
     <h3>
@@ -19,3 +19,15 @@ include 'View/header.php';
     </div>
   </body>
   </html>
+<style>
+body
+{
+  background-color: #23232e;
+
+}
+.jumbotron
+{
+  background-color: #141418;
+  color: #555;
+}
+</style>

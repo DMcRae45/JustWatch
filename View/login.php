@@ -42,3 +42,10 @@ require '../Controller/ValidateEmptyFields.js';
 </main>
 </body>
 </html>
+<style>
+.jumbotron
+{
+  background-color: #141418;
+  color: #555;
+}
+</style>
