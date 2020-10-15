@@ -168,29 +168,29 @@ function AttemptLogOut()
 //Read All Movies
 function GetAllMovies($page)
 {
-    require_once 'connection.php';
+  require_once 'connection.php';
 
-    $amountPerPage = 50;
+  $amountPerPage = 50;
 
-    $startAtRowNo = $page * $amountPerPage;
-    $offset = $startAtRowNo - $amountPerPage;
+  $startAtRowNo = $page * $amountPerPage;
+  $offset = $startAtRowNo - $amountPerPage;
 
-    $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
+  $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
 
-    $stmt = $connection->prepare($sql);
-    $result = $stmt->fetch();
-    $success = $stmt->execute();
+  $stmt = $connection->prepare($sql);
+  $result = $stmt->fetch();
+  $success = $stmt->execute();
 
-    if($success && $stmt->rowCount() > 0)
+  if($success && $stmt->rowCount() > 0)
+  {
+    //  convert to JSON
+    $rows = array();
+    while($r = $stmt->fetch())
     {
-      //  convert to JSON
-      $rows = array();
-      while($r = $stmt->fetch())
-      {
-        $rows[] = $r;
-      }
-      return json_encode($rows);
+      $rows[] = $r;
     }
+    return json_encode($rows);
+  }
 }
 
 function GetMoviesByFilter($movieFilter)
@@ -399,6 +399,7 @@ function GetAllSeries()
       return json_encode($rows);
     }
 }
+
 //Read Series by ID index
 function getSeriesByID($seriesid)
 {
