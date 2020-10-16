@@ -18,6 +18,7 @@ if(substr( $url, 0, 16 ) === "/View/movies.php")
           ";
           if($page == 1)
           {
+            //TODO:remove sweary words haha
             echo "
             <a class='page-link btn disabled' href='movies.php?page=".($page -1)."' aria-label='nob'>
             <span>Previous</span>
