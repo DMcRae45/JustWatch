@@ -219,7 +219,7 @@ footer
 }
 
 /* Small screens mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
 
   .navbar {
     top: -1;
@@ -255,11 +255,11 @@ display: none;
   }
   .card
   {
-    width: 10rem;
+    width: 9rem;
   }
   .poster img
  {
-   height: 12rem;
+   height: 11rem;
  }
   .col-10
   {
