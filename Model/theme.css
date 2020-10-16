@@ -13,7 +13,7 @@ and sets my colour sheme*/
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --bg-danger: #E50914;
+  --bg-danger: #d9534f;
   --transition-speed: 600ms;
   --transitionCard-speed: 400ms;
 }
@@ -37,7 +37,7 @@ body
 
 body .form-control .input-group-text .custom-select
 {
-  background-color: #23232e;
+  background-color: var(--bg-primary);
 }
 
 body::-webkit-scrollbar
@@ -47,7 +47,7 @@ body::-webkit-scrollbar
 
 body::-webkit-scrollbar-track
 {
-  background: #1e1e24;
+  background: var(--bg-secondary);
 }
 
 body::-webkit-scrollbar-thumb
@@ -94,7 +94,7 @@ footer
  .poster img
 {
   border-radius: 0.5rem;
-  border: 0.2rem solid #000 ;
+  border: 0.2rem solid black;
   width: 100%;
   height: 15rem;
   cursor: pointer;
@@ -241,10 +241,10 @@ footer
     width:100%;
     text-align: center;
   }
-.playMovieDescription
-{
-display: none;
-}
+  .playMovieDescription
+  {
+    display: none;
+  }
   .videoPlayer
   {
     width:100%;
@@ -258,9 +258,9 @@ display: none;
     width: 9rem;
   }
   .poster img
- {
-   height: 11rem;
- }
+  {
+    height: 11rem;
+  }
   .col-10
   {
     display: none;
