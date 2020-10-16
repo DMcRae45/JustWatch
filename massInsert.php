@@ -1,25 +1,17 @@
 
 <?php
 Require '../Model/connection.php';
-$dir    = 'Movies';
+$dir    = 'ToBeAdded';
 $files = scandir($dir);
 
 // remove file extension
 for ($i=0 ; $i < sizeof($files) ; $i++)
 {
   // Remove file extension -> "Bloodshot_2020.mp4" = "Bloodshot_2020"
-  //$noExtension = rtrim($files[$i], ".jpg, .png, .mp4");
+  $noExtension = rtrim($files[$i], ".jpg, .png, .mp4");
 
   // Find everything before the first "_" -> "Bloodshot_2020.mp4" = "Bloodshot"
   $titleNoSpaces = strtok($files[$i], '_');
-
-  //Insert a " " before all Uppercase letters  ->  "LordOfTheRings" = " Lord Of The Rings"
-  //$title = preg_replace('/(?<!\ )[A-Z]/', ' $0', $titleNoSpaces);
-  // if string begins with a " " remove it.  ->  " Lord Of The Rings" = "Lord Of The Rings"
-  // if($title[0] == ' ');
-  // {
-  //   $title = ltrim($title, $str[0]);
-  // }
 
   //Insert a " " before all Uppercase letters Ignoring the first one  ->  "LordOfTheRings" = "Lord Of The Rings"
   $title = preg_replace('/(?<! )(?<!^)[A-Z]/',' $0', $titleNoSpaces);
@@ -31,6 +23,11 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
   $image = "Images/".$noExtension.".jpg";
   $description = "Awaiting Description";
   $genre = "TODO";
+// echo "title = ".$title."</br>";
+// echo "Vid Link = ".$video."</br>";
+// echo "image = ".$image."</br>";
+// echo "year = ".$year."</br>";
+// echo "<br><br><br>";
 
   $query = $connection->prepare
   ("
@@ -60,7 +57,7 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
     echo "Inserting".$title." Failed"."</br>";
   }
 
-}
+ }
 
 
 ?>
