@@ -7,16 +7,30 @@ $files = scandir($dir);
 // remove file extension
 for ($i=0 ; $i < sizeof($files) ; $i++)
 {
-  //$noExtension = rtrim($files[$i], ".jpg, .png");
+  // Remove file extension -> "Bloodshot_2020.mp4" = "Bloodshot_2020"
+  //$noExtension = rtrim($files[$i], ".jpg, .png, .mp4");
 
+  // Find everything before the first "_" -> "Bloodshot_2020.mp4" = "Bloodshot"
   $titleNoSpaces = strtok($files[$i], '_');
-  $title = preg_replace('/(?<!\ )[A-Z]/', ' $0', $titleNoSpaces);
+
+  //Insert a " " before all Uppercase letters  ->  "LordOfTheRings" = " Lord Of The Rings"
+  //$title = preg_replace('/(?<!\ )[A-Z]/', ' $0', $titleNoSpaces);
+  // if string begins with a " " remove it.  ->  " Lord Of The Rings" = "Lord Of The Rings"
+  // if($title[0] == ' ');
+  // {
+  //   $title = ltrim($title, $str[0]);
+  // }
+
+  //Insert a " " before all Uppercase letters Ignoring the first one  ->  "LordOfTheRings" = "Lord Of The Rings"
+  $title = preg_replace('/(?<! )(?<!^)[A-Z]/',' $0', $titleNoSpaces);
+
+  //get the info inbetween the "_" and the "." -> "bloodshot_2020.mp4" = "2020"
   $year = trim(strrev(strstr(strrev((strstr($files[$i], '_'))), '.')), '_.');
 
   $video = "Movies/".$files[$i];
-  $image = "Images/film.placeholder.poster.jpg";
+  $image = "Images/".$noExtension.".jpg";
   $description = "Awaiting Description";
-  $genre = "genre";
+  $genre = "TODO";
 
   $query = $connection->prepare
   ("

@@ -12,7 +12,7 @@ if(substr( $url, 0, 16 ) === "/View/movies.php")
 {
   // MOVIES PAGE
     echo "
-    <div>
+    <div class='container'>
       <ul class='pagination justify-content-center'>
         <li class='page-item'>
           ";
