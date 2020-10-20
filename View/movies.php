@@ -113,7 +113,7 @@
 }
 else
 {
-  header('location ../index.php?error=ACCESS DENIED');
+  header("Location: ../index.php?error=ACCESS DENIED");
 }
 ?>
 </html>
