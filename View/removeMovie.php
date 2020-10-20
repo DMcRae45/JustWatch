@@ -3,7 +3,7 @@
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-if(isset($_SESSION['username']))
+if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
 {
   include '../Controller/getAllMovies.php';
 
@@ -67,10 +67,6 @@ echo "
 </body>
 </html>
 ";
-}
-elseif(isset($_SESSION['jobrole']))
-{
-  header("Location: index.php?error=ACCESS DENIED MANAGER REQUIRED");
 }
 else
 {

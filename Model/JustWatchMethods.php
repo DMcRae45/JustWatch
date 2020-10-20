@@ -149,7 +149,7 @@ function AttemptLogin()
 
         $_SESSION['admin'] = $bool;
 
-        header("Location:../View/adminNavigation.php");
+        header("Location:../View/movies.php");
       }
       else
       {
