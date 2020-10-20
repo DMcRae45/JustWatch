@@ -9,13 +9,9 @@ if(isset($_GET['error']))
   echo $error;
 }
 
-if(!isset($_SESSION['username']))
+if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
 {
-  // Customer has tried to access this page
-  header("Location: index../.php?error=ACCESS DENIED");
-}
-else
-{
+
 echo "
 <html>
 
@@ -133,5 +129,9 @@ echo "
 </body>
 </html>
 ";
+}
+else
+{
+  header("Location: ../index.php?error=ACCESS DENIED");
 }
 ?>
