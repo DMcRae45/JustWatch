@@ -75,6 +75,7 @@
                 echo "<div class='poster' >"; // Open card poster
                 echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
                 echo "</div>";// close poster
+
                 echo "<div class='card-bottom'>";
                 echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
                 echo "<class='movieTitle'>".$movieArray[$i]->Year."";
@@ -83,8 +84,9 @@
                 echo "</div>";// close col
 
                 $countPerRow++;
+                $currentItem++;
 
-                if($countPerRow == 5 || $currentItem == $totalItems)
+                if($countPerRow == $perRow || $currentItem == $totalItems)
                 {
                   $countPerRow = 0;
                   echo "</div>";
