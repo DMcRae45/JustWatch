@@ -64,23 +64,27 @@
               $rows = $totalItems / $perRow;
               $countPerRow = 0;
 
+
+              //TODO: make custom row which is the same as class row
+              //but takes all CSS off during mobile view
               for ($i=0 ; $i < sizeof($movieArray) ; $i++)
               {
                 if($countPerRow === 0)
                 {
                   echo "<div class='row'>";
                 }
-                echo "<div class='col'>"; // open col
-                echo "<div class='card'>"; // Open card div
-                echo "<div class='poster' >"; // Open card poster
-                echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
-                echo "</div>";// close poster
 
-                echo "<div class='card-bottom'>";
-                echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
-                echo "<class='movieTitle'>".$movieArray[$i]->Year."";
-                echo "</div>";// close card-bottom
-                echo "</div>";// close card
+                echo "<div class='col'>"; // open col
+                  echo "<div class='card'>"; // Open card div
+                    echo "<div class='poster' >"; // Open card poster
+                      echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
+                    echo "</div>";// close poster
+
+                    echo "<div class='card-bottom'>";
+                      echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
+                      echo "<class='movieTitle'>".$movieArray[$i]->Year."";
+                    echo "</div>";// close card-bottom
+                  echo "</div>";// close card
                 echo "</div>";// close col
 
                 $countPerRow++;
@@ -93,7 +97,10 @@
                 }
               }
 
+              echo "<div class='row mt-5'>";
               include 'pageNavigation.php';
+              echo "</div>";
+
             echo "
             </div>
             </div>
