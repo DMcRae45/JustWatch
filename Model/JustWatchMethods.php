@@ -185,7 +185,7 @@ function GetAllMovies($page)
   $startAtRowNo = $page * $amountPerPage;
   $offset = $startAtRowNo - $amountPerPage;
 
-  $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
+    $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
 
   $stmt = $connection->prepare($sql);
   $result = $stmt->fetch();

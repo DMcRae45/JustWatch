@@ -57,7 +57,7 @@
 
                 // USE THIS VERSION FROM NOW ON
               $rows = 0;
-              $cols = 10;
+              $cols = 5;
               $counter = 1;
               $nbsp = $cols - ($rows % $cols);
               for ($i=0 ; $i < sizeof($movieArray) ; $i++)
