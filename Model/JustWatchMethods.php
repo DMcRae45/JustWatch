@@ -138,7 +138,16 @@ function AttemptLogin()
       {
         $_SESSION['userid'] = $result['User_ID'];
         $_SESSION['username'] = $result['Username'];
-        $_SESSION['admin'] = $result['Admin'];
+        if($result['Admin'] === '1')
+        {
+          $bool = true;
+        }
+        else
+        {
+          $bool = false;
+        }
+
+        $_SESSION['admin'] = $bool;
 
         header("Location:../View/adminNavigation.php");
       }

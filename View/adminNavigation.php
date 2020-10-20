@@ -4,6 +4,11 @@
 Authors: David McRae & Oliver Dickens
 */
 include '../Controller/session.php';
+
+if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
+{
+  echo $_SESSION['username'];
+  echo $_SESSION['admin'];
 include 'header.php';
 include 'navbar.php';
 ?>
@@ -60,4 +65,9 @@ include 'footer.php';
 include '../Controller/bootstrapScript.php';
 include '../Controller/ajaxScript.php';
 include '../Controller/navControl.js';
+}
+else
+{
+  header("Location: ../index.php?error=ACCESS DENIED");
+}
 ?>
