@@ -25,14 +25,16 @@ Author: David McRae, Oliver Dickens
             </div>
           </a>
         </li>
+
         <li class="list-group-item">
-          <a href="../index.php" class="nav-link">
+          <a href="..Controller/AttemptLogout.php" class="nav-link">
             <div class="fa-secondary fa-lg">
               <i class="fas fa-sign-out-alt fa-lg"></i>
               <span class="link-text">Logout</span>
             </div>
           </a>
         </li>
+
       </ul>
     </div>
   </div>
