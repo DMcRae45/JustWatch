@@ -136,9 +136,10 @@ function AttemptLogin()
 
       if ($result && password_verify($password, $result['Password']))
       {
-        $_SESSION['LoggedIn'] = true;
         $_SESSION['userid'] = $result['User_ID'];
         $_SESSION['username'] = $result['Username'];
+        $_SESSION['admin'] = $result['Admin'];
+
         header("Location:../View/adminNavigation.php");
       }
       else
@@ -175,7 +176,8 @@ function GetAllMovies($page)
   $startAtRowNo = $page * $amountPerPage;
   $offset = $startAtRowNo - $amountPerPage;
 
-  $sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
+  //$sql = "SELECT * FROM Movie ORDER BY Year desc, Title asc LIMIT ".$offset.", ".$amountPerPage;
+  $sql = "SELECT * FROM Movie WHERE Genre = 'TODO' OR Genre = 'genre'";
 
   $stmt = $connection->prepare($sql);
   $result = $stmt->fetch();

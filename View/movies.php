@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <!--<head>-->
-  <?php
+<?php
 /*
     Description: JustWatch Movies for free viewing.
     Author: David McRae, Oliver Dickens
 */
   include '../Controller/session.php';
+
+  if(isset($_SESSION['username']))
+  {
 
   if(!isset($_GET['filter']))
   {
@@ -93,7 +96,7 @@
               }
               include 'pageNavigation.php';
             echo "
-            </div>              
+            </div>
             </div>
             <br>";
               ?>
@@ -106,4 +109,11 @@
           include '../Controller/navControl.js';
           ?>
     </body>
+<?php
+}
+else
+{
+  header('location ../index.php?error=ACCESS DENIED');
+}
+?>
 </html>

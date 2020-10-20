@@ -23,11 +23,6 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
   $image = "Images/".$noExtension.".jpg";
   $description = "Awaiting Description";
   $genre = "TODO";
-// echo "title = ".$title."</br>";
-// echo "Vid Link = ".$video."</br>";
-// echo "image = ".$image."</br>";
-// echo "year = ".$year."</br>";
-// echo "<br><br><br>";
 
   $query = $connection->prepare
   ("
