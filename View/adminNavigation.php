@@ -7,8 +7,7 @@ include '../Controller/session.php';
 
 if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
 {
-  echo $_SESSION['username'];
-  echo $_SESSION['admin'];
+
 include 'header.php';
 include 'navbar.php';
 ?>

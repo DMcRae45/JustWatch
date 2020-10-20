@@ -4,7 +4,7 @@
 include '../Controller/session.php';
 include 'header.php';
 include 'navbar.php';
-if(isset($_SESSION['username']))
+if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
 {
   if(isset($_GET['error']))
   {
@@ -84,7 +84,7 @@ if(isset($_SESSION['username']))
 }
 else
 {
-  header("Location: ../index.php");
+  header("Location: ../index.php?error=ACCESS DENIED");
   //TODO: error when not logged in-displays error and dosent relocate user to index
 }
 ?>
