@@ -235,6 +235,7 @@ footer
   {
     display:block;
   }
+}
 
 /* Small screens mobile */
 @media only screen and (max-width: 450px)
