@@ -24,7 +24,7 @@
 <?php
   echo "<h5 class='movieTitle'>".$movieArray->Year."</h5>";
   echo "<h5 class='movieTitle'>".$movieArray->Genre."</h5>";
-  echo "<h5 class='movieTitle'>".$movieArray->Description."</h5>";
+  echo "<h5 class='movieTitle'>".nl2br($movieArray->Description)."</h5>";
 ?>
 </div>
 </main>

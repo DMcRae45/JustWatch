@@ -25,8 +25,18 @@
   ?>
 <!-- </head> -->
 <body>
-  <div class="container mt-5">
-    <div class="row">
+  <title>
+    Movies
+  </title>
+  <div class="container mt-2">
+    <div id="mobileSearch" class="row no-gutters justify-content-center">
+      <form class="form-inline row m-2" method="GET">
+        <input class="form-control col" type="search" placeholder="Search by Title" name="filter">
+        <button class="btn btn-danger col-2" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- <div class="row">
       <form class="form-inline col justify-content-center" method="GET">
         <div class='form-group input-group '>
           <div class='input-group-prepend'>
@@ -40,7 +50,7 @@
             <button class="btn btn-danger" type="submit">sort</button>
         </div>
       </form>
-    </div>
+    </div> -->
   </div>
     <?php
       //Error Reporting for the users

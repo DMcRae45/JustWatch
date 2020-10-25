@@ -12,7 +12,7 @@ Author: David McRae, Oliver Dickens
         <li class="list-group-item">
           <a href="movies.php" class="nav-link">
             <div class="fa-secondary fa-lg">
-              <i class="fas fa-video fa-lg"></i>
+              <i class="fas fa-ticket-alt fa-lg"></i>
               <span class="link-text">Movies</span>
             </div>
           </a>
@@ -20,7 +20,7 @@ Author: David McRae, Oliver Dickens
         <li class="list-group-item">
           <a href="adminNavigation.php" class="nav-link">
             <div class="fa-secondary fa-lg">
-              <i class="fas fa-user-cog fa-lg"></i>
+              <i class="fas fa-id-card-alt fa-lg"></i>
               <span class="link-text">Admin</span>
             </div>
           </a>
@@ -38,7 +38,7 @@ Author: David McRae, Oliver Dickens
       </ul>
     </div>
   </div>
-  <div class="col-10 row no-gutters justify-content-center mt-2">
+  <div id="pcSearch" class="col-10 row no-gutters justify-content-center">
     <form class="form-inline col-10" method="GET">
       <input class="form-control col-10" type="search" placeholder="Search by Title" name="filter">
       <button class="btn btn-danger col-2" type="submit">Search</button>
