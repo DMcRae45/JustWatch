@@ -224,7 +224,7 @@ footer
 }
 
 /* Small screens mobile */
-@media only screen and (max-width: 450px)
+@media only screen and (max-width: 1062px)
 {
   #pcSearch
   {
@@ -235,6 +235,19 @@ footer
   {
     display:block;
   }
+
+/* Small screens mobile */
+@media only screen and (max-width: 450px)
+{
+  /* #pcSearch
+  {
+    display:none;
+  }
+
+  #mobileSearch
+  {
+    display:block;
+  } */
 
   .list-group-item
   {
