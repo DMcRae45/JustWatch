@@ -240,16 +240,6 @@ footer
 /* Small screens mobile */
 @media only screen and (max-width: 450px)
 {
-  /* #pcSearch
-  {
-    display:none;
-  }
-
-  #mobileSearch
-  {
-    display:block;
-  } */
-
   .list-group-item
   {
     background: #000;
