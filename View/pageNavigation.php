@@ -20,7 +20,7 @@ if(substr( $url, 0, 16 ) === "/View/movies.php")
           {
             //TODO:remove sweary words haha
             echo "
-            <a class='page-link btn disabled' href='movies.php?page=".($page -1)."' aria-label='nob'>
+            <a class='page-link btn disabled' href='movies.php?page=".($page -1)."' aria-label='Next'>
             <span>Previous</span>
             </a>
             ";
@@ -28,7 +28,7 @@ if(substr( $url, 0, 16 ) === "/View/movies.php")
           else
           {
             echo "
-            <a class='page-link' href='movies.php?page=".($page -1)."' aria-label='Dick'>
+            <a class='page-link' href='movies.php?page=".($page -1)."' aria-label='Previous'>
             <span>Previous</span>
             </a>
             ";
@@ -45,7 +45,8 @@ if(substr( $url, 0, 16 ) === "/View/movies.php")
         <li class='page-item'><a class='page-link' href='movies.php?page=".($page +5)."'>".($page +5)."</a></li>
         <li class='page-item'>
         ";
-        if($page >= 8)
+
+        if($page >= 20)
         {
           echo "
           <a class='page-link btn disabled' href='movies.php?page=".($page +1)."' aria-label='Next'>
@@ -103,7 +104,7 @@ else if(substr( $url, 0, 22 ) === "/View/updateMovies.php")
       <li class='page-item'><a class='page-link' href='updateMovies.php?page=".($page +5)."'>".($page +5)."</a></li>
       <li class='page-item'>
       ";
-      if($page >= 8)
+      if($page >= 20)
       {
         echo "
         <a class='page-link btn disabled' href='updateMovies.php?page=".($page +1)."' aria-label='Next'>

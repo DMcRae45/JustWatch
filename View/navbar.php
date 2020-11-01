@@ -8,7 +8,9 @@ Author: David McRae, Oliver Dickens
   <div class ="col" id="top">
       <a class="btn logo">JustWatch <i class="fas fa-angle-double-right"></i></a>
     <div class="sideBar row no-gutters justify-content-center" id="sideBar">
+
       <ul class="list-group col">
+
         <li class="list-group-item">
           <a href="movies.php" class="nav-link">
             <div class="fa-secondary fa-lg">
@@ -17,14 +19,21 @@ Author: David McRae, Oliver Dickens
             </div>
           </a>
         </li>
-        <li class="list-group-item">
-          <a href="adminNavigation.php" class="nav-link">
-            <div class="fa-secondary fa-lg">
-              <i class="fas fa-id-card-alt fa-lg"></i>
-              <span class="link-text">Admin</span>
-            </div>
-          </a>
-        </li>
+        <?php
+        if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
+        {
+          echo "
+          <li class='list-group-item'>
+            <a href='adminNavigation.php' class='nav-link'>
+              <div class='fa-secondary fa-lg'>
+                <i class='fas fa-id-card-alt fa-lg'></i>
+                <span class='link-text'>Admin</span>
+              </div>
+            </a>
+          </li>
+          ";
+        }
+        ?>
 
         <li class="list-group-item">
           <a href="../Controller/attemptLogout.php" class="nav-link">
