@@ -11,6 +11,15 @@ Author: David McRae, Oliver Dickens
 
       <ul class="list-group col">
 
+        <li class='list-group-item'>
+          <a href='accountManagement.php' class='nav-link'>
+            <div class='fa-secondary fa-lg'>
+              <i class='fas fa-user-circle fa-lg'></i>
+              <span class='link-text'><?php echo $_SESSION['username']; ?></span>
+            </div>
+          </a>
+        </li>
+
         <li class="list-group-item">
           <a href="movies.php" class="nav-link">
             <div class="fa-secondary fa-lg">
@@ -19,6 +28,7 @@ Author: David McRae, Oliver Dickens
             </div>
           </a>
         </li>
+
         <?php
         if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
         {
@@ -47,10 +57,12 @@ Author: David McRae, Oliver Dickens
       </ul>
     </div>
   </div>
+
   <div id="pcSearch" class="col-10 row no-gutters justify-content-center">
     <form class="form-inline col-10" method="GET">
       <input class="form-control col-10" type="search" placeholder="Search by Title" name="filter">
       <button class="btn btn-danger col-2" type="submit">Search</button>
     </form>
   </div>
+
 </nav>
