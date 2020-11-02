@@ -240,40 +240,67 @@ function AttemptUpdateUser($userid)
     $errorString = $usernameError.$passwordError.$passwordConfirmError;
     header('Location: ../View/accountManagement.php?error='.$errorString);
   }
-  else // Continue with the Registration
+  else // make sure that username doesnt already exist
   {
-    // Hash the password
-    $password = password_hash($password, PASSWORD_DEFAULT);
-    $passwordConfirm ="";
-
-    // Create SQL Template
-    $query = $connection->prepare
+    $usernameCheck = $connection->prepare
     ("
 
-    UPDATE user SET Username = :username, Password = :password
-    WHERE User_ID = :userid
+    SELECT Username FROM User
+    WHERE Username = :username
 
     ");
 
     // Runs and executes the query
-    $success = $query->execute
+    $success = $usernameCheck->execute
     ([
-      'username' => $username,
-      'password' => $password,
-      'userid' => $userid
+      'username' => $username
     ]);
 
-    // If rows returned is more than 0 Let us know if it inserted or not.
-    $count = $query->rowCount();
+    $count = $usernameCheck->rowCount();
     if($count > 0)
     {
-      header('location: ../View/accountManagement.php?error=:Update Successful');
+      header('location: ../View/accountManagement.php?error=:Username already exists');
     }
-    else
+    else // Continue with the Registration
     {
-      header('location: ../View/accountManagement.php?error=:Update Failed');
+      // Hash the password
+      $password = password_hash($password, PASSWORD_DEFAULT);
+      $passwordConfirm ="";
+
+      // Create SQL Template
+      $query = $connection->prepare
+      ("
+
+      UPDATE user SET Username = :username, Password = :password
+      WHERE User_ID = :userid
+
+      ");
+
+      // Runs and executes the query
+      $success = $query->execute
+      ([
+        'username' => $username,
+        'password' => $password,
+        'userid' => $userid
+      ]);
+
+      // If rows returned is more than 0 Let us know if it inserted or not.
+      $count = $query->rowCount();
+      if($count > 0)
+      {
+        $_SESSION['username'] = $username;
+        header('location: ../View/accountManagement.php?error=:Update Successful');
+      }
+      else
+      {
+        header('location: ../View/accountManagement.php?error=:Update Failed');
+      }
     }
   }
+
+
+
+
 }
 
 //Read All Movies
