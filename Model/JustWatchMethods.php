@@ -327,8 +327,7 @@ function AttemptUpdateUser($existingUsername, $userid)
     }
     else
     {
-      echo $query -> errorInfo()[2];
-      header('location: ../View/accountManagement.php?error=:Update  twoer Failed');
+      header('location: ../View/accountManagement.php?error=:Update Failed');
     }
   }
 }
