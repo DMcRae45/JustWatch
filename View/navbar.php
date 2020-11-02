@@ -20,15 +20,6 @@ Author: David McRae, Oliver Dickens
           </a>
         </li>
 
-        <li class="list-group-item">
-          <a href="movies.php" class="nav-link">
-            <div class="fa-secondary fa-lg">
-              <i class="fas fa-ticket-alt fa-lg"></i>
-              <span class="link-text">Movies</span>
-            </div>
-          </a>
-        </li>
-
         <?php
         if(isset($_SESSION['username']) && $_SESSION['admin'] === true)
         {
@@ -44,6 +35,15 @@ Author: David McRae, Oliver Dickens
           ";
         }
         ?>
+
+        <li class="list-group-item">
+          <a href="movies.php" class="nav-link">
+            <div class="fa-secondary fa-lg">
+              <i class="fas fa-ticket-alt fa-lg"></i>
+              <span class="link-text">Movies</span>
+            </div>
+          </a>
+        </li>
 
         <li class="list-group-item">
           <a href="../Controller/attemptLogout.php" class="nav-link">
