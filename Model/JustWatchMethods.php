@@ -176,7 +176,7 @@ function AttemptLogOut()
 }
 
 //Insert new Customer to database
-function AttemptUpdateUser($userid)
+function AttemptUpdateUser($existingUsername, $userid)
 {
   Require 'connection.php';
 
@@ -240,7 +240,7 @@ function AttemptUpdateUser($userid)
     $errorString = $usernameError.$passwordError.$passwordConfirmError;
     header('Location: ../View/accountManagement.php?error='.$errorString);
   }
-  else // make sure that username doesnt already exist
+  else if($existingUsername !== $username) // make sure that username doesnt already exist
   {
     $usernameCheck = $connection->prepare
     ("
@@ -261,7 +261,7 @@ function AttemptUpdateUser($userid)
     {
       header('location: ../View/accountManagement.php?error=:Username already exists');
     }
-    else // Continue with the Registration
+    else // Continue updating username and password
     {
       // Hash the password
       $password = password_hash($password, PASSWORD_DEFAULT);
@@ -271,7 +271,7 @@ function AttemptUpdateUser($userid)
       $query = $connection->prepare
       ("
 
-      UPDATE user SET Username = :username, Password = :password
+      UPDATE User SET Username = :username, Password = :password
       WHERE User_ID = :userid
 
       ");
@@ -297,10 +297,40 @@ function AttemptUpdateUser($userid)
       }
     }
   }
+  else // update only the password
+  {
+    // Hash the password
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    $passwordConfirm ="";
 
+    // Create SQL Template
+    $query = $connection->prepare
+    ("
 
+    UPDATE User SET Password = :password
+    WHERE User_ID = :userid
 
+    ");
 
+    // Runs and executes the query
+    $success = $query->execute
+    ([
+      'password' => $password,
+      'userid' => $userid
+    ]);
+
+    // If rows returned is more than 0 Let us know if it inserted or not.
+    $count = $query->rowCount();
+    if($count > 0)
+    {
+      header('location: ../View/accountManagement.php?error=:Update Successful');
+    }
+    else
+    {
+      echo $query -> errorInfo()[2];
+      header('location: ../View/accountManagement.php?error=:Update  twoer Failed');
+    }
+  }
 }
 
 //Read All Movies

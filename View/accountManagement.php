@@ -38,7 +38,7 @@ if(isset($_GET['error']))
         <div class='input-group-prepend'>
           <span class='input-group-text' id='inputGroupPrepend'>Username</span>
         </div>
-          <input class='form-control' type='text' id='username' name='username' placeholder='Username' required>
+          <input class='form-control' type='text' id='username' name='username' value='<?php echo $_SESSION['username'];?>' required>
             <div class='invalid-feedback'>
               You cannot Leave This field Empty.
             </div>

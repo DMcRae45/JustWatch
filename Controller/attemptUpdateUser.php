@@ -14,6 +14,7 @@ else
 
   session_start();
   $userid = $_SESSION['userid'];
-  AttemptUpdateUser($userid);
+  $existingUsername = $_SESSION['username'];
+  AttemptUpdateUser($existingUsername, $userid);
 }
 ?>
