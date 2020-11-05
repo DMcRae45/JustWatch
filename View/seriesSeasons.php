@@ -11,15 +11,7 @@
   if(isset($_SESSION['username']))
   {
 
-  if(!isset($_GET['filter']))
-  {
-    include '../Controller/getAllSeries.php';
-  }
-  else
-  {
-    $seriesFilter = $_GET['filter'];
-    include '../Controller/getSeriesByFilter.php';
-  }
+  include '../Controller/getSeriesSeasons.php';
   include 'header.php';
   include 'navbar.php';
   ?>
@@ -72,12 +64,11 @@
                 echo "<div class='col'>"; // open col
                   echo "<div class='card'>"; // Open card div
                     echo "<div class='poster' >"; // Open card poster
-                      echo "<a href='seriesSeasons.php?id=".$seriesArray[$i]->Series_ID."'> <img src='".$seriesArray[$i]->Image_link."'  alt='".$seriesArray[$i]->Series_ID."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
+                      echo "<a href='seasonEpisodes.php?id=".$seriesArray[$i]->Series_ID."&S=".$seriesArray[$i]->Season_ID."'> <img src='".$seriesArray[$i]->Image_link."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
                     echo "</div>";// close poster
 
                     echo "<div class='card-bottom'>";
-                      echo "<class='seriesTitle'>".$seriesArray[$i]->Series_Name."<br>";
-                      echo "<class='seriesTitle'>".$seriesArray[$i]->Year;
+                      echo "<class='seriesTitle'>Season: ".$seriesArray[$i]->Season_ID."<br>";
                     echo "</div>";// close card-bottom
                   echo "</div>";// close card
                 echo "</div>";// close col

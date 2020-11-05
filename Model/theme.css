@@ -24,6 +24,10 @@ body
   color: var(--text-secondary);
 }
 
+text
+{
+  color:White;
+}
 .page-link
 {
   background-color: var(--bg-primary);

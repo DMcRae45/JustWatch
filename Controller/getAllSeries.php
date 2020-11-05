@@ -1,13 +1,22 @@
 <?php
 /*
-    Description: Action to get all movies from the database.
+    Description: Action to get all series from the database.
 
-    Author: Oliver Dickens
+    Author: David McRae
  */
 
 
 Include '../Model/JustWatchMethods.php';
 
-$series = GetAllSeries();
+if(!isset($_GET['page']))
+{
+  $page = 1;
+}
+else
+{
+  $page = $_GET['page'];
+}
+
+$series = GetAllSeries($page);
 $seriesArray = json_decode($series);
 ?>

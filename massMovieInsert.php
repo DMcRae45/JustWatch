@@ -7,8 +7,8 @@ $files = scandir($dir);
 // remove file extension
 for ($i=0 ; $i < sizeof($files) ; $i++)
 {
-  // Remove file extension -> "Bloodshot_2020.mp4" = "Bloodshot_2020"
-  $noExtension = rtrim($files[$i], ".jpg, .png, .mp4");
+  // Remove last 4 characters e.g. file extension -> "Bloodshot_2020.mp4" = "Bloodshot_2020"
+  $noExtension = substr($files[$i], 0, -4);
 
   // Find everything before the first "_" -> "Bloodshot_2020.mp4" = "Bloodshot"
   $titleNoSpaces = strtok($files[$i], '_');
@@ -20,7 +20,7 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
   $year = trim(strrev(strstr(strrev((strstr($files[$i], '_'))), '.')), '_.');
 
   $video = "Movies/".$files[$i];
-  $image = "Images/".$noExtension.".jpg";
+  $image = "Movies/Images/".$noExtension.".jpg";
   $description = "Awaiting Description";
   $genre = "TODO";
 
@@ -53,6 +53,4 @@ for ($i=0 ; $i < sizeof($files) ; $i++)
   }
 
  }
-
-
 ?>

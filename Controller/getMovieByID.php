@@ -13,6 +13,6 @@ else
 {
   Include '../Model/JustWatchMethods.php';
 
-  $movie = getMovieByID($movieid);
+  $movie = GetMovieByID($movieid);
   $movieArray = json_decode($movie);
 }

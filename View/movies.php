@@ -87,7 +87,7 @@
                 echo "<div class='col'>"; // open col
                   echo "<div class='card'>"; // Open card div
                     echo "<div class='poster' >"; // Open card poster
-                      echo "<a href='play.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='images/film.placeholder.poster.jpg'></a>"; // card image
+                      echo "<a href='playMovie.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
                     echo "</div>";// close poster
 
                     echo "<div class='card-bottom'>";

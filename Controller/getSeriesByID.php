@@ -13,6 +13,6 @@ else
 {
   Include '../Model/JustWatchMethods.php';
 
-  $series = getSeriesByID($seriesid);
+  $series = GetSeriesByID($seriesid);
   $seriesArray = json_decode($series);
 }

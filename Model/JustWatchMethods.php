@@ -514,7 +514,7 @@ function RemoveMovieByID($movieid)
 }
 
 //Read Movie by ID index
-function getMovieByID($movieid)
+function GetMovieByID($movieid)
 {
   require 'connection.php';
 
@@ -539,42 +539,68 @@ function getMovieByID($movieid)
   }
 }
 
-
-//Below david is my work 26/09/20
-//starting to lay the foundations of adding series to our database
-
-
-//Read All series
-function GetAllSeries()
+//Read All Series
+function GetAllSeries($page)
 {
-    require_once 'connection.php';
+  require_once 'connection.php';
 
-    $sql = "SELECT * FROM series";
+  $amountPerPage = 50;
 
-    $stmt = $connection->prepare($sql);
-    $result = $stmt->fetch();
-    $success = $stmt->execute();
+  $startAtRowNo = $page * $amountPerPage;
+  $offset = $startAtRowNo - $amountPerPage;
 
-    if($success && $stmt->rowCount() > 0)
+    $sql = "SELECT * FROM Series GROUP BY Series_ID ORDER BY Year desc, Series_Name asc LIMIT ".$offset.", ".$amountPerPage;
+
+  $stmt = $connection->prepare($sql);
+  $result = $stmt->fetch();
+  $success = $stmt->execute();
+
+  if($success && $stmt->rowCount() > 0)
+  {
+    //  convert to JSON
+    $rows = array();
+    while($r = $stmt->fetch())
     {
-      //  convert to JSON
-      $rows = array();
-      while($r = $stmt->fetch())
-      {
-        $rows[] = $r;
-      }
-      return json_encode($rows);
+      $rows[] = $r;
     }
+    return json_encode($rows);
+  }
 }
 
-//Read Series by ID index
-function getSeriesByID($seriesid)
+function GetSeriesByFilter($seriesFilter)
+{
+  require_once 'connection.php';
+
+  $sql = "SELECT * FROM Series WHERE Series_Name LIKE '%".$seriesFilter."%' ORDER BY Season_ID asc";
+
+  $stmt = $connection->prepare($sql);
+  $result = $stmt->fetch();
+  $success = $stmt->execute();
+
+  if($success && $stmt->rowCount() > 0)
+  {
+    //  convert to JSON
+    $rows = array();
+    while($r = $stmt->fetch())
+    {
+      $rows[] = $r;
+    }
+    return json_encode($rows);
+  }
+  else
+  {
+    header('Location ../View/series.php?error=Filter Not Found');
+  }
+}
+
+function GetSeriesSeasons($seriesid)
 {
   require 'connection.php';
 
+  // SELECT all seeason id's where series id = series id
   $query = $connection->prepare
   ("
-    SELECT * FROM series WHERE series_ID = :seriesid LIMIT 1
+    SELECT * FROM Series WHERE Series_ID = :seriesid GROUP BY Season_ID
   ");
 
   $success = $query->execute
@@ -584,11 +610,76 @@ function getSeriesByID($seriesid)
 
   if($success && $query->rowCount() > 0)
   {
+    //  convert to JSON
+    $rows = array();
+    while($r = $query->fetch())
+    {
+      $rows[] = $r;
+    }
+    return json_encode($rows);
+  }
+  else
+  {
+    echo "Unable to find Seasons";
+  }
+}
+
+function GetSeasonEpisodes($seriesId, $seasonId)
+{
+  require 'connection.php';
+
+  // SELECT all seeason id's where series id = series id
+  $query = $connection->prepare
+  ("
+    SELECT * FROM Series WHERE Series_ID = :seriesId AND Season_ID = :seasonId
+  ");
+
+  $success = $query->execute
+  ([
+    'seriesId' => $seriesId,
+    'seasonId' => $seasonId
+  ]);
+
+  if($success && $query->rowCount() > 0)
+  {
+    //  convert to JSON
+    $rows = array();
+    while($r = $query->fetch())
+    {
+      $rows[] = $r;
+    }
+    return json_encode($rows);
+  }
+  else
+  {
+    echo "Unable to find Episodes";
+  }
+}
+
+function GetEpisode($seriesId, $seasonId, $episodeId)
+{
+  require 'connection.php';
+
+  // SELECT all seeason id's where series id = series id
+  $query = $connection->prepare
+  ("
+    SELECT * FROM Series WHERE Series_ID = :seriesId AND Season_ID = :seasonId AND Episode_ID = :episodeId
+  ");
+
+  $success = $query->execute
+  ([
+    'seriesId' => $seriesId,
+    'seasonId' => $seasonId,
+    'episodeId' => $episodeId
+  ]);
+
+  if($success && $query->rowCount() > 0)
+  {
     $row = $query->fetch();
     return json_encode($row);
   }
   else
   {
-    echo "Unable to find Series";
+    echo "Unable to find Episode";
   }
 }

@@ -46,6 +46,15 @@ Author: David McRae, Oliver Dickens
         </li>
 
         <li class="list-group-item">
+          <a href="series.php" class="nav-link">
+            <div class="fa-secondary fa-lg">
+              <i class="fas fa-tv fa-lg"></i>
+              <span class="link-text">Series</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-group-item">
           <a href="../Controller/attemptLogout.php" class="nav-link">
             <div class="fa-secondary fa-lg">
               <i class="fas fa-sign-out-alt fa-lg"></i>
