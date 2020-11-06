@@ -86,35 +86,34 @@ footer
 .card
 {
   background-color: var(--bg-primary);
-  position: relative;
   width: 12rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  box-shadow: 2px 4px var(--bg-secondary);
 }
-
-.poster img:hover
-{
-  border: 0.2rem solid var(--bg-danger);
+.card:hover{
+    box-shadow: 2px 4px var(--bg-danger);
 }
-
  .poster img
 {
-  border-radius: 0.5rem;
-  border: 0.2rem solid black;
   width: 100%;
-  height: 15rem;
-
+  height: 16rem;
 }
 .card-bottom
 {
-  background-color: var(--bg-primary);
-  color: var(--text-secondary);
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  margin 0 auto;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
 }
 .playMovie
 {
+  width:100%;
   margin-top: 2rem;
-  text-align: center;
 }
-
 .videoPlayer
 {
   width:100%;
@@ -128,13 +127,9 @@ footer
   display: flex;
   flex-direction: row;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
-.descriptionCard
-{
-    display: flex;
-    flex-direction: row;
-}
+
 .descriptionPoster img
 {
  border-radius: 0.5rem;
@@ -265,21 +260,17 @@ footer
     background: #000;
     transition: var(--transition-speed);
   }
-  .playMovie
-  {
-    margin-top: 10%;
-    width:100%;
-    text-align: center;
-  }
-
   .videoPlayer
   {
     width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin: 0;
   }
+.descriptionBox{
+  display: none;
+}
   .card
   {
     width: 9rem;
@@ -287,9 +278,5 @@ footer
   .poster img
   {
     height: 11rem;
-  }
-  .col-10
-  {
-    display: none;
   }
 }

@@ -33,10 +33,11 @@ Include '../Controller/getMovieByID.php';
             </div>
             <div class="descriptionCard col-9">
               <?php echo "<div class='card-body'>"; ?>
-                <?php echo "<h2 class='movieTitle'>Title: ".$movieArray->Title."";?>
-                <?php echo "<h4 class='movieTitle'>Year: ".$movieArray->Year."";?>
-                <?php echo "<h4 class='movieTitle'>Genre: ".$movieArray->Genre."";?>
-                <?php   echo "<h6 class='movieTitle'>".nl2br($movieArray->Description)."</h5>";?>
+                <?php echo "<h2 class='movieTitle'>".$movieArray->Title."";?>
+                <?php echo "<h6 class='movieTitle text-muted'>".nl2br($movieArray->Description)."</h5>";?>
+                <?php echo "<h6 class='movieTitle'><b>Year: </b>".$movieArray->Year."";?>
+                <?php echo "<h6 class='movieTitle'><b>Genre: </b>".$movieArray->Genre."";?>
+
                 <?php echo "</div>"; ?>
               </div>
             </div>
