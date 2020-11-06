@@ -27,11 +27,11 @@ Include '../Controller/getMovieByID.php';
       <div class="row">
         <div class="descriptionBox col-12">
           <div class="descriptionCard col-3">
-            <?php echo "<div class='descriptionPoster'>"; ?>
+            <?php echo "<div class='poster'>"; ?>
               <?php echo "<img src='".$movieArray->Image_link."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image?>
               <?php echo "</div>"; ?>
             </div>
-            <div class="descriptionCard col-9">
+            <div class="descriptionCard col-6">
               <?php echo "<div class='card-body'>"; ?>
                 <?php echo "<h2 class='movieTitle'>".$movieArray->Title."";?>
                 <?php echo "<h6 class='movieTitle text-muted'>".nl2br($movieArray->Description)."</h5>";?>
