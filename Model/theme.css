@@ -13,7 +13,7 @@ and sets my colour sheme*/
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --bg-danger: #d9534f;
+  --bg-danger: red;
   --transition-speed: 600ms;
   --transitionCard-speed: 400ms;
 }
@@ -90,6 +90,7 @@ footer
   width: 12rem;
   margin-top: 1rem;
 }
+
 .poster img:hover
 {
   border: 0.2rem solid var(--bg-danger);
@@ -101,9 +102,10 @@ footer
   border: 0.2rem solid black;
   width: 100%;
   height: 15rem;
-  cursor: pointer;
+
 }
-.card-bottom{
+.card-bottom
+{
   background-color: var(--bg-primary);
   color: var(--text-secondary);
 }
@@ -112,6 +114,7 @@ footer
   margin-top: 2rem;
   text-align: center;
 }
+
 .videoPlayer
 {
   width:100%;
@@ -120,11 +123,24 @@ footer
   align-items: center;
   margin: 0;
 }
-.playMovieDescription
+.descriptionBox
 {
-  width:100%;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
+}
+.descriptionCard
+{
+    display: flex;
+    flex-direction: row;
+}
+.descriptionPoster img
+{
+ border-radius: 0.5rem;
+ width: 100%;
+ height: 15rem;
+
 }
 .navbar
 {
@@ -255,10 +271,7 @@ footer
     width:100%;
     text-align: center;
   }
-  .playMovieDescription
-  {
-    display: none;
-  }
+
   .videoPlayer
   {
     width:100%;

@@ -91,8 +91,8 @@
                     echo "</div>";// close poster
 
                     echo "<div class='card-bottom'>";
-                      echo "<class='movieTitle'>".$movieArray[$i]->Title."<br>";
-                      echo "<class='movieTitle'>".$movieArray[$i]->Year."";
+                      echo "<class='movieTitle mb-2 '>".$movieArray[$i]->Title."<br>";
+                      echo "<class='movieTitle mb-2'>".$movieArray[$i]->Year."";
                     echo "</div>";// close card-bottom
                   echo "</div>";// close card
                 echo "</div>";// close col
