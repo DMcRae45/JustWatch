@@ -67,7 +67,7 @@
               //TODO: Expansion: add Bookmarked button to add to watch list
 
 
-              $perRow = 10;//10 works best on small screens:no single movie options
+              $perRow = 50;//10 works best on small screens:no single movie options
               $totalItems = sizeof($movieArray);
               $currentItem = 0;
 
@@ -83,15 +83,15 @@
                 {
                   echo "<div class='row'>";
                 }
-                echo "<div class='col-2 m-2'>"; // open col
+                echo "<div class='col'>"; // open col
                   echo "<div class='card'>"; // Open card div
                     echo "<div class='poster' >"; // Open card poster
                       echo "<a href='playMovie.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
                     echo "</div>";// close poster
                   echo "</div>";// close card
                   echo "<div class='card-bottom'>";
-                    echo "<br><class='movieTitle mb-2'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";//if this is un commented change theme.css cardbottom top: 95% to 90%
-                  //echo "<class='movieTitle mb-2'>(".$movieArray[$i]->Year.")<br>";
+                    echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";//if this is un commented change theme.css cardbottom top: 95% to 90%
+                    //echo "<br><class='movieTitle'>(".$movieArray[$i]->Year.")<br>";
                   echo "</div>";// close card-bottom
                 echo "</div>";// close col
 

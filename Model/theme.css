@@ -99,8 +99,6 @@ footer
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  justify-content: center;
-  align-items: center;
 }
 /* these are our play ovie screens */
 .playMovie
@@ -273,7 +271,5 @@ footer
   {
     height: 11rem;
   }
-  .card-bottom{
-      display: none;
-  }
+
 }
