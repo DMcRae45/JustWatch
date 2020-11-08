@@ -90,7 +90,7 @@
                     echo "</div>";// close poster
                   echo "</div>";// close card
                   echo "<div class='card-bottom'>";
-                    echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";//if this is un commented change theme.css cardbottom top: 95% to 90%
+                    echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";
                     //echo "<br><class='movieTitle'>(".$movieArray[$i]->Year.")<br>";
                   echo "</div>";// close card-bottom
                 echo "</div>";// close col

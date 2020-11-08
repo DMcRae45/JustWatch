@@ -96,6 +96,7 @@ footer
 /* font below movie*/
 .card-bottom
 {
+  width: 12rem;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;

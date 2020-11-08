@@ -44,7 +44,6 @@
   letter-spacing: 1px;
 }
 .form-control{
-  text-transform: uppercase;
   border-radius: 10em;
 }
 
