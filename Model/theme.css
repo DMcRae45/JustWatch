@@ -77,11 +77,16 @@ footer
 
 /* these are our movie displayed classes*/
 /* these are our movie cards*/
+.col
+{
+/* these width % allow us to control size of the cols contolling the cards*/
+max-width: 20%;
+min-width: 20%;
+}
 .card
 {
   background-color: var(--bg-primary);
-  width: 12rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   box-shadow: 2px 4px var(--bg-secondary);
 }
 .card:hover{
@@ -96,7 +101,6 @@ footer
 /* font below movie*/
 .card-bottom
 {
-  width: 12rem;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -255,30 +259,20 @@ footer
   }
   .videoPlayer
   {
-    width:100%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
   }
   .descriptionBox{
     display: none;
   }
-
   .col{
-    display: flex;
+    min-width: 50%; /* this is needed as the boostrap forces it to $row  */
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  .card
-  {
-    width: 9rem;
   }
   .poster img
   {
-    height: 11rem;
+    height: 13rem;
   }
 
 }

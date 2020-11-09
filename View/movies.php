@@ -67,7 +67,7 @@
               //TODO: Expansion: add Bookmarked button to add to watch list
 
 
-              $perRow = 50;//10 works best on small screens:no single movie options
+              $perRow = 10;//10 works best on small screens:no single movie options
               $totalItems = sizeof($movieArray);
               $currentItem = 0;
 
@@ -84,7 +84,6 @@
                   echo "<div class='row'>";
                 }
                 echo "<div class='col'>"; // open col
-                echo "<div class='cardWraper'>"; // open col
                   echo "<div class='card'>"; // Open card div
                     echo "<div class='poster' >"; // Open card poster
                       echo "<a href='playMovie.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
@@ -94,7 +93,6 @@
                     echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";
                     //echo "<br><class='movieTitle'>(".$movieArray[$i]->Year.")<br>";
                   echo "</div>";// close card-bottom
-                  echo "</div>";// close cardWrapper
                 echo "</div>";// close col
 
 

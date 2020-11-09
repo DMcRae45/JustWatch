@@ -5,11 +5,11 @@ Author: David McRae, Oliver Dickens
 */
 ?>
 <nav class="navbar d-flex d-inline no-gutters row">
-  <div class ="col" id="top">
+  <div class ="col-2" id="top">
       <a class="btn logo">JustWatch <i class="fas fa-angle-double-right"></i></a>
     <div class="sideBar row no-gutters justify-content-center" id="sideBar">
 
-      <ul class="list-group col">
+      <ul class="list-group col-2">
 
         <li class='list-group-item'>
           <a href='accountManagement.php' class='nav-link'>
