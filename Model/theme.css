@@ -261,9 +261,17 @@ footer
     align-items: center;
     margin: 0;
   }
-.descriptionBox{
-  display: none;
-}
+  .descriptionBox{
+    display: none;
+  }
+
+  .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
   .card
   {
     width: 9rem;
