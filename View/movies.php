@@ -67,7 +67,7 @@
               //TODO: Expansion: add Bookmarked button to add to watch list
 
 
-              $perRow = 10;//10 works best on small screens:no single movie options
+              $perRow = 5;//10 works best on small screens:no single movie options
               $totalItems = sizeof($movieArray);
               $currentItem = 0;
 
@@ -77,41 +77,30 @@
 
               //TODO: make custom row which is the same as class row
               //but takes all CSS off during mobile view
+              echo "<div class='row'>";
               for ($i=0 ; $i < sizeof($movieArray) ; $i++)
               {
-                if($countPerRow === 0)
-                {
-                  echo "<div class='row'>";
-                }
-                echo "<div class='col'>"; // open col
-                  echo "<div class='card'>"; // Open card div
-                    echo "<div class='poster' >"; // Open card poster
+                echo "<div class='col mt-5'>"; // open col
+
+                    echo "<div class='card'>"; // Open card div
                       echo "<a href='playMovie.php?id=".$movieArray[$i]->Movie_ID."'> <img src='".$movieArray[$i]->Image_link."'  alt='".$movieArray[$i]->Movie_ID."' onerror=this.src='Images/film.placeholder.poster.jpg'></a>"; // card image
-                    echo "</div>";// close poster
-                  echo "</div>";// close card
-                  echo "<div class='card-bottom'>";
-                    echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";
-                    //echo "<br><class='movieTitle'>(".$movieArray[$i]->Year.")<br>";
-                  echo "</div>";// close card-bottom
+
+
+                      echo "<div class='card-bottom'>";
+                        echo "<br><class='movieTitle'>".$movieArray[$i]->Title." (".$movieArray[$i]->Year.")";
+                      echo "</div>";// close card-bottom
+
+                    echo "</div>";// close card
                 echo "</div>";// close col
-
-
-                $countPerRow++;
-                $currentItem++;
-
-                if($countPerRow == $perRow || $currentItem == $totalItems)
-                {
-                  $countPerRow = 0;
-                  echo "</div>";
-                }
               }
+              echo "</div>";
+
 
               echo "<div class='row mt-5'>";
               include 'pageNavigation.php';
               echo "</div>";
 
             echo "
-            </div>
             </div>
             <br>";
               ?>

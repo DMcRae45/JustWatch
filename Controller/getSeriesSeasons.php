@@ -11,7 +11,7 @@ if(!isset($_GET['id']))
 else
 {
   $seriesid = $_GET['id'];
-  
+
   Include '../Model/JustWatchMethods.php';
 
   $series = GetSeriesSeasons($seriesid);
