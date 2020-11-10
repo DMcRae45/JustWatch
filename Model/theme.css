@@ -98,6 +98,8 @@ footer
   box-shadow: 2px 4px var(--bg-secondary);
   max-width: 12rem;
   min-width: 12rem;
+  min-height: 18rem;
+  max-height: 18rem;
 }
 
 /* font below movie*/
@@ -283,6 +285,8 @@ footer
   {
     max-width: 10rem;
     min-width: 10rem;
+    max-height: 15rem;
+    min-height: 15rem;
   }
 
   .videoPoster
