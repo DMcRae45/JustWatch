@@ -8,25 +8,22 @@ Author: David McRae, Oliver Dickens
 include 'Controller/session.php';
 include 'View/header.php';
 ?>
-
-<body bg-black>
-  <div class="container text-center">
-      <h1>JustWatch</h1>
-      <a class="cd-btn mt-2" href="View/login.php" data-type="page-transition">Login</a>
-    </div>
-  </body>
-  </html>
 <style>
+
 body
 {
   background-color: #23232e;
   color: #ffffff;
+  height:100vh;
 }
-.container {
-  padding-top: 15%;
+.container
+{
+  margin-top: 40vh;
   letter-spacing: 1px;
 }
-.cd-btn {
+
+.cd-btn
+{
   display: inline-block;
   padding: 1.4em 1.6em;
   margin-bottom: 2em;
@@ -38,9 +35,17 @@ body
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.cd-btn:hover {
+.cd-btn:hover
+{
   background-color: #323c50;
   color: #ffffff;
 }
-
 </style>
+
+<body>
+  <div class="container text-center ">
+      <h1>JustWatch</h1>
+      <a class="cd-btn mt-2" href="View/login.php" data-type="page-transition">Login</a>
+    </div>
+</body>
+</html>

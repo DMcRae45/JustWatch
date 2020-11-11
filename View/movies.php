@@ -36,21 +36,22 @@
       </form>
     </div>
 
-    <!-- <div class="row">
-      <form class="form-inline col justify-content-center" method="GET">
-        <div class='form-group input-group '>
-          <div class='input-group-prepend'>
-            <span class='input-group-text' id='inputGroupPrepend'>Order By</span>
-          </div>
-          <select class='custom-select' name='orderBy'>
-            <option value=''>Order By</option>
-            <option value='year'>year</option>
-            <option value='alphabetical'>alphabetical</option>
-          </select>
-            <button class="btn btn-danger" type="submit">sort</button>
-        </div>
-      </form>
-    </div> -->
+    <div class="btn-group-toggle" data-toggle="buttons">
+
+      <label class="btn btn-outline-danger">
+        <input type="checkbox" checked>Action</input>
+      </label>
+
+      <label class="btn btn-outline-danger">
+        <input type="checkbox" checked>Adventure</input>
+      </label>
+
+      <label class="btn btn-outline-danger">
+        <input type="checkbox" checked>Family</input>
+      </label>
+
+    </div>
+
   </div>
     <?php
       //Error Reporting for the users

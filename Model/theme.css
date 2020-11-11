@@ -241,7 +241,7 @@ footer
   transform: rotate(-180deg);
 }
 
-/* these are screen size outputs*/
+/* Display no mobile search as this will only display on mobile screen sizes */
 #mobileSearch
 {
   display:none;
@@ -258,6 +258,14 @@ footer
   #mobileSearch
   {
     display:block;
+  }
+}
+
+@media only screen and (max-width: 992px)
+{
+  .videoPoster
+  {
+    display:none;
   }
 }
 
@@ -287,11 +295,6 @@ footer
     min-width: 10rem;
     max-height: 15rem;
     min-height: 15rem;
-  }
-
-  .videoPoster
-  {
-    display:none;
   }
 
 }
